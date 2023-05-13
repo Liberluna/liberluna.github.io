@@ -42,7 +42,7 @@ jobs:
           cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
       - uses: pnpm/action-setup@v2.2.2
         with:
-          version: 9.6.6
+          version: 8.5.0
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
