@@ -25,11 +25,12 @@ import Layout from '../../layouts/Layout.astro'
             autocomplete="email" />
         </label>
       </div>
-      <div>
-        <label>
-          <span>PR</span>
-          <textarea class="textarea"/>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">自己PR</span>
+          <span class="label-text-alt">スキルなど</span>
         </label>
+        <textarea class="textarea textarea-bordered h-24" placeholder="PR"></textarea>
       </div>
       <div>
         <input type="checkbox" required id="member-ok" class="checkbox" />
