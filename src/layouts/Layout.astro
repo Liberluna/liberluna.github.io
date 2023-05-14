@@ -6,6 +6,7 @@ export interface Props {
 const { title } = Astro.props;
 
 import LiberlunaLogo from "../../assets/liberluna-logo.svg"
+import Footer from "../components/Footer.astro"
 ---
 
 <!DOCTYPE html>
@@ -41,6 +42,7 @@ import LiberlunaLogo from "../../assets/liberluna-logo.svg"
 				<!-- Start page content -->
 				<slot />
 				<!-- End page content -->
+				<Footer />
 			</div> 
 			<div class="drawer-side">
 				<label for="my-drawer-3" class="drawer-overlay"></label>
