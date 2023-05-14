@@ -13,7 +13,9 @@ import members from '../../components/members/members.ts'
     <div class="grid grid-rows-2">
       {
         members().map(profile => {
-          return <Member profile={profile}/>
+          return <div>
+            {profile.name}
+          </div>
         })
       }
     </div>
