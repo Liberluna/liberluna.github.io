@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro'
+---
+<Layout title="Members | Liberluna">
+  <div class="mx-10">
+    <div class="text-5xl">Join us</div>
+    <div class="indent-4">Liberlunaに入りたいですか?</div>
+    <form class="border">
+      <div>
+        <input type="checkbox" required id="member-ok" />
+        <label for="member-ok">
+          Liberlunaの
+          <a href="join_us/conditions" class="link">募集要項</a>
+          に同意します。
+        </label>
+      </div>
+      <input type="submit" value="送信!" class="btn btn-outline" />
+    </form>
+  </div>
+</Layout>
