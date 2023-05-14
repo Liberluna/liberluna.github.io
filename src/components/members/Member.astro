@@ -17,7 +17,7 @@ const { profile } = Astro.props
         profile.links.map(link => {
           return <div>
             <a href={link.url}>
-              <img src={link.icon} alt={link.name} />
+              <img src={link.icon} alt={link.name} class="w-4 h-4" />
             </a>
           </div>
         })
