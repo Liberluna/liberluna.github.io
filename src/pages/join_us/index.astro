@@ -5,7 +5,12 @@ import Layout from '../../layouts/Layout.astro'
   <div class="mx-10">
     <div class="text-5xl">Join us</div>
     <div class="indent-4">Liberlunaに入りたいですか?</div>
-    <form class="border p-4" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfRQtYptq1fGnlbdyovIu1lMciZOaZAuldFJcXM51gAU9TKlw/formResponse" method="POST">
+    <form
+      class="border p-4"
+      action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfRQtYptq1fGnlbdyovIu1lMciZOaZAuldFJcXM51gAU9TKlw/formResponse"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="submitted=true;">
       <div>
         <label class="input-group">
           <span>ニックネーム</span>
@@ -43,5 +48,14 @@ import Layout from '../../layouts/Layout.astro'
       </div>
       <input type="submit" value="送信!" class="btn btn-outline" />
     </form>
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none"
+      onload="if(submitted){window.location='https://google.com'}"
+    ></iframe>
   </div>
 </Layout>
+<script>
+  let submitted = false;
+</script>
