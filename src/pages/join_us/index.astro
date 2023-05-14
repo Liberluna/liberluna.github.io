@@ -7,7 +7,32 @@ import Layout from '../../layouts/Layout.astro'
     <div class="indent-4">Liberlunaに入りたいですか?</div>
     <form class="border">
       <div>
-        <input type="checkbox" required id="member-ok" />
+        <label class="input-group">
+          <span>ニックネーム</span>
+          <input type="text" placeholder="name" class="input input-bordered" />
+        </label>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Your Email</span>
+        </label>
+        <label class="input-group">
+          <span>Email</span>
+          <input
+            type="text"
+            placeholder="your@example.com"
+            class="input input-bordered"
+            autocomplete="email" />
+        </label>
+      </div>
+      <div>
+        <label>
+          <span>PR</span>
+          <textarea class="textarea"/>
+        </label>
+      </div>
+      <div>
+        <input type="checkbox" required id="member-ok" class="checkbox" />
         <label for="member-ok">
           Liberlunaの
           <a href="join_us/conditions" class="link">募集要項</a>
