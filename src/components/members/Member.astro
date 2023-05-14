@@ -12,6 +12,8 @@ const { profile } = Astro.props
   <div class="card-body items-center text-center">
     <h2 class="card-title">{profile.name}</h2>
     <p>{profile.descs.ja}</p>
+    <p>{profile.posts.join("/")}</p>
+    <p>{profile.skills.join("/")}</p>
     <div class="flex card-actions">
       {
         profile.links.map(link => {
