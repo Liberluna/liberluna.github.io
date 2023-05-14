@@ -1,11 +1,15 @@
 ---
 import Layout from '../../layouts/Layout.astro'
+import Markdown from '@astrojs/markdown-component'
+
 ---
 <Layout title="Members | Liberluna">
   <div class="mx-10">
     <div class="text-5xl">Liberluna メンバー募集要項</div>
     <div>
-      
+      <Markdown>
+        # Markdown syntax is now supported! **Yay!**
+      </Markdown>
     </div>
   </div>
 </Layout>
