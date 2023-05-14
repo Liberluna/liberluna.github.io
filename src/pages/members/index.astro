@@ -1,5 +1,8 @@
 ---
-import Layout from '../../layouts/Layout.astro';
+import Layout from '../../layouts/Layout.astro'
+import Member from '../../components/members/Member.astro'
+import members from '../../components/members/members.ts'
+
 ---
 <Layout title="Members | Liberluna">
   <div class="mx-10">
@@ -7,6 +10,10 @@ import Layout from '../../layouts/Layout.astro';
     <div>
       Liberlunaには、多種多様なメンバーが所属しています。
     </div>
-    
+    {
+      members().map(profile => {
+        return <Member profile={profile}/>
+      })
+    }
   </div>
 </Layout>
