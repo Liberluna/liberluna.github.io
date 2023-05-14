@@ -13,9 +13,7 @@ import members from '../../components/members/members.ts'
     <div class="grid grid-cols-4 gap-4">
       {
         members().map(profile => {
-          return <div>
-            {profile.name}
-          </div>
+          return <Member profile={profile} />
         })
       }
     </div>
