@@ -102,7 +102,7 @@ const members = (): Members => [
     },
     descs: {
       en: "I'm nakasyou. second year of junior high school",
-      ja: "性別記入欄が嫌い。"
+      ja: "性別記入欄が嫌い。14 y/o 中学生"
     },
     posts: ["Developer"],
     skills: ["Deno", "HTML&CSS", "JavaScript", "Node.js", "Python", "TypeScript", "Shell"],

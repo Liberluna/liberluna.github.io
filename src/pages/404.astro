@@ -1,8 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
+import joke404 from "../../assets/404-joke.jpg"
 ---
 
 <Layout title="404 Not found | Liberluna">
-  <div>404</div>
-  <div>Not found</div>
+  <div class="mx-auto text-5xl">404</div>
+  <div class="mx-auto text-xl">Not found</div>
+  <div class="">
+    <img src={joke404} class="w-96 mx-auto" />
+  </div>
+  <div>
+    
+  </div>
 </Layout>
