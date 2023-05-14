@@ -6,6 +6,7 @@ export interface Props {
 const { title } = Astro.props;
 
 import LiberlunaLogo from "../../assets/liberluna-logo.svg"
+import Footer from "../components/Footer.astro"
 ---
 
 <!DOCTYPE html>
@@ -18,22 +19,40 @@ import LiberlunaLogo from "../../assets/liberluna-logo.svg"
 		<title>{title}</title>
 	</head>
 	<body class="break-words">
-		<div class="navbar bg-base-100 shadow-md opacity-90 sticky top-0">
-			<div class="navbar-start">
-				<a class="btn btn-ghost normal-case text-xl">
-					<img src={LiberlunaLogo} alt="Liberluna" class="h-9 opacity-1" />
-				</a>
-			</div>
-			<div class="navbar-end">
-				<ul class="menu menu-horizontal bg-base-100 rounded-box">
-					<li><a>Item 1</a></li>
-					<li><a>Item 2</a></li>
-					<li><a>Item 3</a></li>
+		<div class="drawer">
+			<input id="my-drawer-3" type="checkbox" class="drawer-toggle" /> 
+			<div class="drawer-content flex flex-col">
+				<div class="w-full navbar bg-base-100 sticky top-0 shadow-md opacity-90">
+					<div class="flex-none lg:hidden">
+						<label for="my-drawer-3" class="btn btn-square btn-ghost">
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+						</label>
+					</div> 
+					<div class="flex-1 px-2 mx-2">
+						<img src={LiberlunaLogo} alt="Liberluna" class="h-9" />
+					</div>
+					<div class="flex-none hidden lg:block">
+						<ul class="menu menu-horizontal">
+							<li><a href="/members">Members</a></li>
+							<li><a href="/projects">Projects</a></li>
+							<li><a href="/contact">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Start page content -->
+				<slot />
+				<!-- End page content -->
+				<Footer />
+			</div> 
+			<div class="drawer-side">
+				<label for="my-drawer-3" class="drawer-overlay"></label>
+				<ul class="menu p-4 w-80 bg-base-100">
+					<li><a href="/members">Members</a></li>
+					<li><a href="/projects">Projects</a></li>
+					<li><a href="/contact">Contact</a></li>					
 				</ul>
 			</div>
 		</div>
-
-		<slot />
 	</body>
 </html>
 <style is:global>
