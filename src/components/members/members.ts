@@ -436,7 +436,7 @@ const members = (): Members => [
       {
         url: "https://scratch.mit.edu/users/move028/",
         name: "Scratch",
-        icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/scracth.svg",
+        icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/scratch.svg",
       },
     ],
   },
