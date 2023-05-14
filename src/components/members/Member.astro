@@ -15,7 +15,7 @@ const { profile } = Astro.props
     <div class="flex">
       {
         profile.links.map(link => {
-          <div>
+          return <div>
             <a href={link.url}>
               <img src={link.icon} alt={link.name} />
             </a>
