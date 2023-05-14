@@ -5,9 +5,9 @@ export interface Props {
 }
 const { profile } = Astro.props
 ---
-<div class="card w-96 bg-base-100 shadow-xl">
+<div class="card w-60 bg-base-100 shadow-xl">
   <figure class="px-10 pt-10">
-    <img src={profile.icon} alt="Shoes" class="rounded-xl" />
+    <img src={profile.icon} alt="Shoes" class="rounded-full w-12 h-12" />
   </figure>
   <div class="card-body items-center text-center">
     <h2 class="card-title">{profile.name}</h2>
