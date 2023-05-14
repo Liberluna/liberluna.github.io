@@ -10,12 +10,18 @@ import members from '../../components/members/members.ts'
     <div>
       Liberlunaには、多種多様なメンバーが所属しています。
     </div>
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center ">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center mb-5">
       {
         members().map(profile => {
           return <Member profile={profile} />
         })
       }
+    </div>
+    <div>
+      <div class="text-2xl">Liberlunaに入りたいですか?</div>
+      <div>
+        <a href="/join-us" class="btn">Join us!</a>
+      </div>
     </div>
   </div>
 </Layout>
