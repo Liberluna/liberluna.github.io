@@ -12,11 +12,11 @@ const { profile } = Astro.props
   <div class="card-body items-center text-center">
     <h2 class="card-title">{profile.name}</h2>
     <p>{profile.descs.ja}</p>
-    <div class="flex">
+    <div class="flex card-actions">
       {
         profile.links.map(link => {
           return <div>
-            <a href={link.url}>
+            <a href={link.url} class="profile-link">
               <img src={link.icon} alt={link.name} class="w-6 h-6 mx-0.5" />
             </a>
           </div>
@@ -28,6 +28,6 @@ const { profile } = Astro.props
 
 <style>
   .member{
-    z-index: -10;
+    
   }
 </style>
