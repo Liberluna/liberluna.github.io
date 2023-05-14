@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@astrojs/markdown-component':
+    specifier: ^1.0.3
+    version: 1.0.3
   '@astrojs/tailwind':
     specifier: ^3.1.2
     version: 3.1.2(astro@2.4.1)(tailwindcss@3.3.2)
@@ -50,6 +53,10 @@ packages:
       vscode-languageserver-textdocument: 1.0.8
       vscode-languageserver-types: 3.17.3
       vscode-uri: 3.0.7
+    dev: false
+
+  /@astrojs/markdown-component@1.0.3:
+    resolution: {integrity: sha512-ShoqDGA05+5GGVfVwflMwUEhvvvsVZSKhNrD9vVvU3PVEQKnl9fKbfSIBLFYHKxcIaLMMeiL+tMD9lKvyAjm6A==}
     dev: false
 
   /@astrojs/markdown-remark@2.2.0(astro@2.4.1):
