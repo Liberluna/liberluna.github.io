@@ -18,21 +18,33 @@ import LiberlunaLogo from "../../assets/liberluna-logo.svg"
 		<title>{title}</title>
 	</head>
 	<body class="break-words">
-		<div class="navbar bg-base-100 shadow-md opacity-90 sticky top-0">
-			<div class="navbar-start">
-				<a class="btn btn-ghost normal-case text-xl">
-					<img src={LiberlunaLogo} alt="Liberluna" class="h-9 opacity-1" />
-				</a>
-			</div>
-			<div class="navbar-end">
-				<ul class="menu menu-horizontal bg-base-100 rounded-box">
-					<li><a href="/members">Members</a></li>
-					<li><a href="/projects">Projects</a></li>
-					<li><a href="/contact">Contact</a></li>
+		<div class="drawer">
+			<input id="header-drawer" type="checkbox" class="drawer-toggle" />
+			<div class="drawer-content">
+		    <div class="navbar bg-base-100 shadow-md opacity-90 sticky top-0">
+		  	  <div class="navbar-start">
+			    	<a class="btn btn-ghost normal-case text-xl">
+			    		<img src={LiberlunaLogo} alt="Liberluna" class="h-9 opacity-1" />
+		  	  	</a>
+		    	</div>
+			    <div class="navbar-end">
+			    	<ul class="menu menu-horizontal bg-base-100 rounded-box">
+				    	<li><a href="/members">Members</a></li>
+				    	<li><a href="/projects">Projects</a></li>
+				    	<li><a href="/contact">Contact</a></li>
+					  	<label for="header-drawer" class="btn btn-primary drawer-button">Open drawer</label>
+			    	</ul>
+			    </div>
+	  	  </div>
+      </div>
+			<div class="drawer-side">
+				<label for="header-drawer" class="drawer-overlay"></label>
+				<ul class="menu p-4 w-80 bg-base-100 text-base-content">
+					<li><a>Sidebar Item 1</a></li>
+					<li><a>Sidebar Item 2</a></li>
 				</ul>
 			</div>
-		</div>
-
+    </div>
 		<slot />
 	</body>
 </html>
