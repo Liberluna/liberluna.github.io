@@ -5,7 +5,7 @@ export interface Props {
 }
 const { profile } = Astro.props
 ---
-<div class="card w-60 bg-base-100 shadow-xl">
+<div class="card w-60 bg-base-100 shadow-xl member">
   <figure class="px-10 pt-10">
     <img src={profile.icon} alt="Shoes" class="rounded-full w-12 h-12" />
   </figure>
@@ -14,3 +14,9 @@ const { profile } = Astro.props
     <p>{profile.descs.ja}</p>
   </div>
 </div>
+
+<style>
+  .member{
+    z-index: -10;
+  }
+</style>
