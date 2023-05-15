@@ -1,10 +1,28 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+
+const posts = await Astro.glob('./posts/*.md')
 ---
 <Layout title="LiberBlog">
   <div class="mx-10">
     <div class="text-xl">LiberBlog</div>
     <div>LiberlunaメンバーによるBlog</div>
     <div>Coming soon...</div>
+    {
+      posts.map(post => {
+        return <div>
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="No image" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">{post.frontmatter.title}</h2>
+              <p>{post.frontmatter.desc}</p>
+              <div class="card-actions justify-end">
+                <a class="btn btn-primary" href={post.url}>See this post</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      })
+    }
   </div>
 </Layout>
