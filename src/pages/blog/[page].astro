@@ -2,6 +2,13 @@
 import Layout from '../../layouts/Layout.astro';
 
 const posts = await Astro.glob('./posts/*.md')
+
+export const getStaticPaths = () => {
+  return [
+    { params: { page: "1" } },
+    { params: { page: "2" } },
+  ]
+}
 ---
 <Layout title="LiberBlog">
   <div class="mx-10">
