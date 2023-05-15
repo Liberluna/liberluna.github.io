@@ -1,0 +1,86 @@
+---
+const { frontmatter } = Astro.props
+
+export interface Props {
+	frontmatter : {
+    title: string
+    author: string
+    avatar: string
+    date: string
+    update: string
+  }
+}
+const yyymmdd = (date: Date): string => {
+  const y = date.getFullYear();
+  const m = ('00' + (date.getMonth()+1)).slice(-2);
+  const d = ('00' + date.getDate()).slice(-2);
+  return `${y}-${m}-${d}`;
+}
+
+import Layout from "./Layout.astro"
+import TablerIcons from "../components/TablerIcons.astro"
+
+const avatarPath = `../../assets/avatars/${frontmatter.avatar}`
+const avatar = (await import(avatarPath)).default
+---
+
+<Layout title="Post">
+  <div class="lg:mx-20 mx-10">
+    <div class="text-2xl">{frontmatter.title}</div>
+    <div>
+      <div class="flex items-center">
+        <div class="avatar">
+          <div class="w-10 rounded-full">
+            <img src={avatar} />
+          </div>
+        </div>
+        <div class="text-xl">{frontmatter.author}</div>
+      </div>
+      <div>
+        <div class="flex">
+          <div class="flex">
+            <div><TablerIcons icon="calendar-event" /></div>
+            <div>
+              {yyymmdd(new Date(frontmatter.date))}
+            </div>
+          </div>
+          <div class="flex">
+            <div><TablerIcons icon="reload" /></div>
+            <div>
+              {yyymmdd(new Date(frontmatter.update))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="markdown">
+      <slot />
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  .markdown h1 {
+    font-size: 2em !important;
+  }
+  .markdown h2 {
+    font-size: 1.5em !important;
+  }
+  .markdown h3 {
+    font-size: 1.17em !important;
+  }
+  .markdown h4 {
+    font-size: 1.00em !important;
+  }
+  .markdown h5 {
+    font-size: 0.83em !important;
+  }
+  .markdown h6 {
+    font-size: 0.67em !important;
+  }
+  .markdown ul{
+    list-style-type: disc !important;
+    margin-left: 1em !important;
+  }
+</style>
