@@ -2,7 +2,7 @@
 const { frontmatter } = Astro.props
 
 export interface Props {
-	frontmatter : {
+  frontmatter : {
     title: string
     author: string
     avatar: string
@@ -22,6 +22,7 @@ import TablerIcons from "../components/TablerIcons.astro"
 
 const avatarPath = `../../assets/avatars/${frontmatter.avatar}`
 const avatar = (await import(avatarPath)).default
+console.log(avatar)
 ---
 
 <Layout title="Post">
