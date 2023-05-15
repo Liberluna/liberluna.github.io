@@ -20,9 +20,10 @@ const yyymmdd = (date: Date): string => {
 import Layout from "./Layout.astro"
 import TablerIcons from "../components/TablerIcons.astro"
 
-const avatarPath = `../../assets/avatars/${frontmatter.avatar}`
-const avatar = (await import(avatarPath)).default
-console.log(avatar)
+//const avatarPath = `../../assets/avatars/${frontmatter.avatar}`
+//const avatar = (await import(avatarPath)).default
+//console.log(avatar)
+import avatar from "../../assets/avatars/nakasyou.png"
 ---
 
 <Layout title="Post">
