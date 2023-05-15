@@ -20,37 +20,14 @@ const yyymmdd = (date: Date): string => {
 import Layout from "./Layout.astro"
 import TablerIcons from "../components/TablerIcons.astro"
 
-import path from "path";
-function dynamicViteAssetImport(imageFileName) {
-  const filename = path.parse(imageFileName);
-  const name = filename.name;
-  const ext = filename.ext;
-  switch (ext) {
-    case ".webp":
-      return import(`../assets/${name}.webp`);
-    case ".jpg":
-      return import(`../assets/${name}.jpg`);
-    case ".png":
-      return import(`../assets/${name}.png`);
-    case ".svg":
-      return import(`../assets/${name}.svg`);
-    case ".gif":
-      return import(`../assets/${name}.gif`);
-    case ".avif":
-      return import(`../assets/${name}.avif`);
-    case ".jpeg":
-      return import(`../assets/${name}.jpeg`);
-    default:
-      return import(`../assets/${name}.jpg`);
-  }
-}
 
 //const avatarPath = `../../assets/avatars/${frontmatter.avatar}`
 const avatarPath = `../../assets/avatars/nakasyou.png`
 //const avatar = (await import(avatarPath)).default
-const avatar = dynamicViteAssetImport(avatarPath)
+//const avatar = (avatarPath)
 //console.log(avatar)
 //import avatar from "../../assets/avatars/nakasyou.png"
+const avatar = import(avatarPath)
 ---
 
 <Layout title="Post">
