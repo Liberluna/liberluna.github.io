@@ -30,7 +30,7 @@ import TablerIcons from "../components/TablerIcons.astro"
 //const avatar = import(avatarPath)
 
 const avatars = import.meta.glob<ImageMetadata>('../../assets/avatars/*', { import: 'default' })
-const avatar = await avatars["../../assets/avatars/nakasyou.png"]()
+const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
 ---
 
 <Layout title="Post">
