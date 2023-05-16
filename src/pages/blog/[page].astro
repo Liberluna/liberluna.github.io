@@ -4,15 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 export const getStaticPaths = async () => {
   const posts = await Astro.glob('./posts/*.md')
   const pages = Math.ceil(posts.length / 16)
-  let result = []
-  for(const i=0;i!==pages;i++){
-    result.push({
-      params: {
-        page: (i+1).toString()
-      }
-    })
-  }
-  return result
+  return []
 }
 ---
 <Layout title="LiberBlog">
