@@ -37,7 +37,7 @@ const viewPosts = posts.slice(start, end)
         })
       }
     </div>
-    <div class="flex">
+    <div class="flex justify-center">
       {page>1 ? <a href={`/blog/${page-1}`} class="btn">←</a> : <button class="btn" disabled="disabled">←</button>}
       <div>{ page }</div>
       {page!==max ? <a href={`/blog/${page+1}`} class="btn">→</a> : <button class="btn" disabled="disabled">→</button>}
