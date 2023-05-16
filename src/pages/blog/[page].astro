@@ -15,5 +15,5 @@ export const getStaticPaths = async () => {
 const { page } = Astro.params;
 ---
 <Layout title="LiberBlog">
-  <BlogPage page={parseInt(page)} />
+  <BlogPage page={parseInt(page? page:  "1")} />
 </Layout>
