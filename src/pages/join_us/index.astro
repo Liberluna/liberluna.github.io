@@ -11,10 +11,19 @@ import Layout from '../../layouts/Layout.astro'
       method="POST"
       target="hidden_iframe"
       onsubmit="submitted=true;">
-      <div>
+
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">ニックネーム</span>
+        </label>
         <label class="input-group">
-          <span>ニックネーム</span>
-          <input type="text" placeholder="name" class="input input-bordered" name="entry.1496900534"/>
+          <span>Name</span>
+          <input
+            type="text"
+            placeholder="your@example.com"
+            class="input input-bordered"
+            autocomplete="name" 
+            name="entry.1496900534"/>
         </label>
       </div>
       <div class="form-control">
