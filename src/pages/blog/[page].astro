@@ -1,9 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const posts = await Astro.glob('./posts/*.md')
-
-export const getStaticPaths = () => {
+export const getStaticPaths = async () => {
+  const posts = await Astro.glob('./posts/*.md')
   const pages = Math.ceil(posts.length / 16)
   const result = []
   for(const i=0;i!==pages;i++){
