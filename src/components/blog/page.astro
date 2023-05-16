@@ -36,8 +36,8 @@ const viewPosts = posts.slice(start, end)
       }
     </div>
     <div class="flex">
-      {page>1 ? <a href={page-1} class="btn">←</a> : <button class="btn" disabled="disabled">←</button>}
+      {page>1 ? <a href={`/blog/${page-1}`} class="btn">←</a> : <button class="btn" disabled="disabled">←</button>}
       <div>{ page }</div>
-      <a href={page+1} class="btn">→</a>
+      <a href={`/blog/${page-1}`} class="btn">→</a>
     </div>
   </div>
