@@ -8,6 +8,8 @@ const { page } = Astro.props
 const posts = await Astro.glob('../../pages/blog/posts/*.md')
 posts.reverse()
 
+const max = Math.ceil(posts.length/16)
+
 // 1ページスタート( 1page, 2page, 3page...)
 const start = (page - 1) * 16 // 1ページあたり16Posts
 const end   = page * 16
@@ -38,6 +40,6 @@ const viewPosts = posts.slice(start, end)
     <div class="flex">
       {page>1 ? <a href={`/blog/${page-1}`} class="btn">←</a> : <button class="btn" disabled="disabled">←</button>}
       <div>{ page }</div>
-      <a href={`/blog/${page-1}`} class="btn">→</a>
+      {page!==max ? <a href={`/blog/${page+1}`} class="btn">→</a> : <button class="btn" disabled="disabled">→</button>}
     </div>
   </div>
