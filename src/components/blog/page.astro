@@ -35,4 +35,9 @@ const viewPosts = posts.slice(start, end)
         })
       }
     </div>
+    <div class="grid grid-cols-3 gap-4">
+      <a href={page-1} class="btn">←</a>
+      <div>{ page }</div>
+      <a href={page+1} class="btn">→</a>
+    </div>
   </div>
