@@ -7,7 +7,7 @@ export const getStaticPaths = async () => {
   
   return Array.from(Array(pages)).map((_,index) => ({
     params: {
-      page: 1
+      page: (index+1).toString(),
     }
   }))
 }
