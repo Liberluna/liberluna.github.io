@@ -5,15 +5,15 @@ export interface Props {
 }
 const { profile } = Astro.props
 ---
-<div class="card w-60 bg-base-100 shadow-xl member break-words">
+<div class="card w-60 bg-base-100 shadow-xl member break-all">
   <figure class="px-10 pt-10">
     <img src={profile.icon} alt={profile.name} class="rounded-full w-12 h-12" />
   </figure>
-  <div class="card-body items-center text-center break-words">
+  <div class="card-body items-center text-center w-full break-all">
     <h2 class="card-title">{profile.name}</h2>
-    <p class="break-words">{profile.descs.ja}</p>
-    <p class="break-words">{profile.posts.join("/")}</p>
-    <p class="break-words">{profile.skills.join("/")}</p>
+    <p class="w-full">{profile.descs.ja}</p>
+    <p class="w-full">{profile.posts.join("/")}</p>
+    <p class="w-full">{profile.skills.join("/")}</p>
     <div class="flex card-actions">
       {
         profile.links.map(link => {
