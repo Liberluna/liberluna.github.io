@@ -2,12 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 
 const posts = await Astro.glob('./posts/*.md')
-
+[...Array(posts.length)].map((_,index)=>({ params: { page: index.toString() }}))
 export const getStaticPaths = () => {
-  return [
-    { params: { page: "1" } },
-    { params: { page: "2" } },
-  ]
+  return [...Array(posts.length)].map((_,index)=>({ params: { page: index.toString() }}))
 }
 ---
 <Layout title="LiberBlog">
