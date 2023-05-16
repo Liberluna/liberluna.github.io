@@ -140,7 +140,7 @@ const members = (): Members => [
       ja: "Ame"
     },
     posts: ["Developer"],
-    skills: ["Brainfuck", "C#", "HTML&CSS", "JavaScript", "PHP", "Python", "R"],
+    skills: ["Brainfuck", "C#", "HTML&CSS", "JS&TS", "PHP", "Python", "Bug Hunter" , "R"],
     icon: "https://github.com/EdamAme-x.png",
     links: [
       {
@@ -430,7 +430,7 @@ const members = (): Members => [
       ja: "いつも元気な11月3日生まれ。ってのは建前で(ﾟ∀ﾟ)ｱﾋｬがただただ好きな変人です！"
     },
     posts: ["Developer"],
-    skills: ["hijacked person helper","Scratch","Clang"],
+    skills: ["hijacked person helper","Scratch","Clang","Batch","Ruby"],
     icon: "https://raw.githubusercontent.com/Liberluna/page/main/assets/member-icons/movenap.png",
     links: [
       {
