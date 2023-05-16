@@ -4,7 +4,9 @@ import BlogPage from "../../components/blog/page.astro"
 
 export const getStaticPaths = async () => {
   return [
-    {}
+    {
+      params: { tag: "sine" }
+    }
   ]
 }
 const { page } = Astro.params;

@@ -16,18 +16,19 @@ const viewPosts = posts.slice(start, end)
   <div class="mx-10">
     <div class="text-xl">LiberBlog</div>
     <div>LiberlunaメンバーによるBlog</div>
-    <div class="grid-rows-1 md:grid-rows-2 lg:grid-rows-3 gap-4">
+    <div class="grid grid-cols-4 gap-4">
       {
         viewPosts.map(post => {
-          return <div>
-            <div class="card w-96 bg-base-100 shadow-xl">
-              <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="No image" /></figure>
-              <div class="card-body">
-                <h2 class="card-title">{post.frontmatter.title}</h2>
-                <p>{post.frontmatter.desc}</p>
-                <div class="card-actions justify-end">
-                  <a class="btn btn-primary" href={post.url}>See this post</a>
-                </div>
+          return <div class="card bg-base-100 shadow-xl">
+            <figure><img
+              src={post.frontmatter.thumbnail}
+              alt="No image"
+              class=""/></figure>
+            <div class="card-body">
+              <h2 class="card-title">{post.frontmatter.title}</h2>
+              <p>{post.frontmatter.desc}</p>
+              <div class="card-actions justify-end">
+                <a class="btn btn-primary" href={post.url}>See this post</a>
               </div>
             </div>
           </div>
