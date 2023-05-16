@@ -4,7 +4,16 @@ import Layout from '../../layouts/Layout.astro';
 const posts = await Astro.glob('./posts/*.md')
 [...Array(posts.length)].map((_,index)=>({ params: { page: index.toString() }}))
 export const getStaticPaths = () => {
-  return [...Array(posts.length)].map((_,index)=>({ params: { page: index.toString() }}))
+  const pages = Math.ceil(posts.length / 16)
+  const result = []
+  for(const i=0;i!==pages;i++){
+    result.push({
+      params: {
+        page: (i+1).toString()
+      }
+    }))
+  }
+  return result
 }
 ---
 <Layout title="LiberBlog">
