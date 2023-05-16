@@ -5,7 +5,7 @@ export interface Props {
 }
 const { page } = Astro.props
 
-const posts = await Astro.glob('./posts/*.md')
+const posts = await Astro.glob('../../pages/blog/posts/*.md')
 posts.reverse()
 
 // 1ページスタート( 1page, 2page, 3page...)
