@@ -1,4 +1,7 @@
 ---
+import TablerIcons from '../components/TablerIcons.astro'
+import Layout from './Layout.astro'
+
 const { frontmatter } = Astro.props
 
 export interface Props {
@@ -11,25 +14,21 @@ export interface Props {
   }
 }
 const yyymmdd = (date: Date): string => {
-  const y = date.getFullYear();
-  const m = ('00' + (date.getMonth()+1)).slice(-2);
-  const d = ('00' + date.getDate()).slice(-2);
-  return `${y}-${m}-${d}`;
+  const y = date.getFullYear()
+  const m = ('00' + (date.getMonth() + 1)).slice(-2)
+  const d = ('00' + date.getDate()).slice(-2)
+  return `${y}-${m}-${d}`
 }
 
-import Layout from "./Layout.astro"
-import TablerIcons from "../components/TablerIcons.astro"
+// const avatarPath = `../../assets/avatars/${frontmatter.avatar}`
+// const avatarPath = `../../assets/avatars/nakasyou.png`
+// const avatar = (await import(avatarPath)).default
+// const avatar = (avatarPath)
+// console.log(avatar)
+// import avatar from "../../assets/avatars/nakasyou.png"
+// const avatar = import(avatarPath)
 
-
-//const avatarPath = `../../assets/avatars/${frontmatter.avatar}`
-//const avatarPath = `../../assets/avatars/nakasyou.png`
-//const avatar = (await import(avatarPath)).default
-//const avatar = (avatarPath)
-//console.log(avatar)
-//import avatar from "../../assets/avatars/nakasyou.png"
-//const avatar = import(avatarPath)
-
-const avatars = import.meta.glob<ImageMetadata>('../../assets/avatars/*', { import: 'default' })
+const avatars = import.meta.glob('../../assets/avatars/*', { import: 'default' })
 const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
 ---
 

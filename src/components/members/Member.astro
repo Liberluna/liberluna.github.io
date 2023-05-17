@@ -1,5 +1,5 @@
 ---
-import type { Profile } from "./members.ts"
+import type { Profile } from './members.ts'
 export interface Props {
   profile: Profile
 }
@@ -17,8 +17,8 @@ if (profile.icon == "" || profile.icon == "noimage") {
   <div class="card-body items-center text-center w-full break-all">
     <h2 class="card-title">{profile.name}</h2>
     <p class="w-full">{profile.descs.ja}</p>
-    <p class="w-full">{profile.posts.join("/")}</p>
-    <p class="w-full">{profile.skills.join("/")}</p>
+    <p class="w-full">{profile.posts.join('/')}</p>
+    <p class="w-full">{profile.skills.join('/')}</p>
     <div class="flex card-actions">
       {
         profile.links.map(link => {
@@ -35,6 +35,6 @@ if (profile.icon == "" || profile.icon == "noimage") {
 
 <style>
   .member{
-    
+
   }
 </style>

@@ -1,5 +1,7 @@
 ---
 
+import noImage from '../../../assets/no-image.png'
+
 export interface Props {
   page: number
 }
@@ -8,14 +10,12 @@ const { page } = Astro.props
 const posts = await Astro.glob('../../pages/blog/posts/*.md')
 posts.reverse()
 
-const max = Math.ceil(posts.length/16)
+const max = Math.ceil(posts.length / 16)
 
 // 1ページスタート( 1page, 2page, 3page...)
 const start = (page - 1) * 16 // 1ページあたり16Posts
-const end   = page * 16
+const end = page * 16
 const viewPosts = posts.slice(start, end)
-
-import noImage from "../../../assets/no-image.png"
 
 ---
   <div class="mx-10">
@@ -26,7 +26,7 @@ import noImage from "../../../assets/no-image.png"
         viewPosts.map(post => {
           return <div class="card bg-base-100 shadow-xl">
             <figure><img
-              src={post.frontmatter.thumbnail? post.frontmatter.thumbnail : noImage}
+              src={post.frontmatter.thumbnail ? post.frontmatter.thumbnail : noImage}
               alt="No image"
               class=""/></figure>
             <div class="card-body">
@@ -41,8 +41,8 @@ import noImage from "../../../assets/no-image.png"
       }
     </div>
     <div class="flex justify-evenly items-center">
-      {page>1 ? <a href={`/blog/${page-1}`} class="btn">←</a> : <button class="btn" disabled="disabled">←</button>}
+      {page > 1 ? <a href={`/blog/${page - 1}`} class="btn">←</a> : <button class="btn" disabled="disabled">←</button>}
       <div>{ page }/{ max }</div>
-      {page!==max ? <a href={`/blog/${page+1}`} class="btn">→</a> : <button class="btn" disabled="disabled">→</button>}
+      {page !== max ? <a href={`/blog/${page + 1}`} class="btn">→</a> : <button class="btn" disabled="disabled">→</button>}
     </div>
   </div>
