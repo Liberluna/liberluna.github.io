@@ -18,7 +18,6 @@ module.exports = {
       }
     ],
     'import/order': [2, { alphabetize: { order: 'asc' } }],
-    'astro/no-set-html-directive': 0
   },
   overrides: [
     {
@@ -34,7 +33,6 @@ module.exports = {
       },
       rules: {
         // override/add rules settings here, such as:
-        'astro/no-set-html-directive': 'error'
       }
     },
     {
@@ -42,5 +40,4 @@ module.exports = {
       parser: '@typescript-eslint/parser'
     }
   ],
-  extends: 'standard'
 }
