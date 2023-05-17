@@ -4,6 +4,11 @@ export interface Props {
   profile: Profile
 }
 const { profile } = Astro.props
+
+//Astro知らんから　何となく
+if (profile.icon == "") {
+  profile.icon = "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg";
+}
 ---
 <div class="card w-60 bg-base-100 shadow-xl member break-all">
   <figure class="px-10 pt-10">
