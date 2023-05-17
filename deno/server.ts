@@ -8,7 +8,7 @@ import { serveStatic } from "https://deno.land/x/hono@v3.2.0-rc.3/middleware.ts"
 const app = new Hono()
 
 app.get('/*', serveStatic({
-  path: "./dist",
+  root: "./dist",
 }))
 
 serve(app.fetch)
