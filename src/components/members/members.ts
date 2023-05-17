@@ -56,8 +56,7 @@ const members = (): Members => [
     },
     posts: ["Manager","Developer"],
     skills: ["C", "PHP"],
-    icon: "
-        icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg",
+    icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg",
     links: [
       {
         url: "https://github.com/",
