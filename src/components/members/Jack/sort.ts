@@ -1,3 +1,4 @@
+/*
 // ネタ用　後で差し替える
 import members from "../members";
 
@@ -51,3 +52,4 @@ for (let f: number = 0; f < Members.length; f++) {
 Rank0.sort((a, b) => (b[1] + b[2]) - (a[1] + a[2])); 
 
 console.log(Rank0); 
+*/
