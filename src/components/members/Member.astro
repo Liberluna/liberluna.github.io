@@ -1,5 +1,5 @@
 ---
-import type { Profile } from "./members.ts"
+import type { Profile } from './members.ts'
 export interface Props {
   profile: Profile
 }
@@ -12,8 +12,8 @@ const { profile } = Astro.props
   <div class="card-body items-center text-center w-full break-all">
     <h2 class="card-title">{profile.name}</h2>
     <p class="w-full">{profile.descs.ja}</p>
-    <p class="w-full">{profile.posts.join("/")}</p>
-    <p class="w-full">{profile.skills.join("/")}</p>
+    <p class="w-full">{profile.posts.join('/')}</p>
+    <p class="w-full">{profile.skills.join('/')}</p>
     <div class="flex card-actions">
       {
         profile.links.map(link => {
@@ -30,6 +30,6 @@ const { profile } = Astro.props
 
 <style>
   .member{
-    
+
   }
 </style>

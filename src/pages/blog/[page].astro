@@ -1,19 +1,19 @@
 ---
-import BlogPage from "../../components/blog/page.astro"
-import Layout from '../../layouts/Layout.astro';
+import BlogPage from '../../components/blog/page.astro'
+import Layout from '../../layouts/Layout.astro'
 
 export const getStaticPaths = async () => {
   const posts = await Astro.glob('./posts/*.md')
   const pages = Math.ceil(posts.length / 16)
-  
-  return Array.from(Array(pages)).map((_,index) => ({
+
+  return Array.from(Array(pages)).map((_, index) => ({
     params: {
-      page: (index+1).toString(),
+      page: (index + 1).toString()
     }
   }))
 }
 const { page } = Astro.params;
 ---
 <Layout title="LiberBlog">
-  <BlogPage page={parseInt(page? page:  "1")} />
+  <BlogPage page={parseInt(page || '1')} />
 </Layout>
