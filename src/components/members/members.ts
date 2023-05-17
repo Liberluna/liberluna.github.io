@@ -136,10 +136,10 @@ const members = (): Members => [
       ja: "Ame"
     },
     descs: {
-      en: "Ame",
-      ja: "Ame"
+      en: "Bug Hunter",
+      ja: "Bug Hunter"
     },
-    posts: ["Developer"],
+    posts: ["Developer","Bug HunH"],
     skills: ["Brainfuck", "C#", "HTML&CSS", "JS&TS", "PHP", "Python", "Bug Hunter" , "R"],
     icon: "https://github.com/EdamAme-x.png",
     links: [
