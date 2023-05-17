@@ -15,7 +15,8 @@ export type Profile = {
     url: string,
     icon: string,  // 白黒画像
     name: string,
-  }>
+  }>,
+  TBD?: string // 更新予定
 }
 export type Members = Array<Profile>
 
@@ -56,8 +57,7 @@ const members = (): Members => [
     },
     posts: ["Manager","Developer"],
     skills: ["C", "PHP"],
-    icon: "
-        icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg",
+    icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg",
     links: [
       {
         url: "https://github.com/",
@@ -70,6 +70,7 @@ const members = (): Members => [
         icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/twitter.svg",
       },
     ],
+    TBD: "はやくアイコン決めてくれ・・・"
   },
   {
     name: "Bonds",
