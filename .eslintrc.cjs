@@ -17,8 +17,7 @@ module.exports = {
         prefer: 'type-imports'
       }
     ],
-    'import/order': [2, { alphabetize: { order: 'asc' } }],
-    'astro/no-set-html-directive': "off"
+    'import/order': [2, { alphabetize: { order: 'asc' } }]
   },
   overrides: [
     {
