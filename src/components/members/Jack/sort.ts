@@ -20,7 +20,7 @@ Other: 1
 skill
 とりあえず数で。
 */
-
+/*
 let Members: any = members;
 
 for (let f: number = 0; f < Members.length; f++) {
