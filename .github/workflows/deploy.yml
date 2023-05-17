@@ -2,7 +2,7 @@
 #
 # To get started with Astro see: https://docs.astro.build/en/getting-started/
 #
-name: Deploy Astro site to Pages
+name: 本番環境
 
 on:
   # Runs on pushes targeting the default branch
