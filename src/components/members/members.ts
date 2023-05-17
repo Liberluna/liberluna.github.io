@@ -56,7 +56,8 @@ const members = (): Members => [
     },
     posts: ["Manager","Developer"],
     skills: ["C", "PHP"],
-    icon: "",
+    icon: "
+        icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg",
     links: [
       {
         url: "https://github.com/",
@@ -139,7 +140,7 @@ const members = (): Members => [
       en: "Bug Hunter",
       ja: "Bug Hunter"
     },
-    posts: ["Developer","Bug HunH"],
+    posts: ["Developer","Bug Hunter"],
     skills: ["Brainfuck", "C#", "HTML&CSS", "JS&TS", "PHP", "Python", "Bug Hunter" , "R"],
     icon: "https://github.com/EdamAme-x.png",
     links: [
