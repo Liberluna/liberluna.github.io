@@ -29,7 +29,7 @@ import Layout from "./Layout.astro"
 //import avatar from "../../assets/avatars/nakasyou.png"
 //const avatar = import(avatarPath)
 
-const avatars = import.meta.glob<ImageMetadata>('../../assets/avatars/*', { import: 'default' })
+const avatars = import.meta.glob('../../assets/avatars/*', { import: 'default' })
 const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
 ---
 
