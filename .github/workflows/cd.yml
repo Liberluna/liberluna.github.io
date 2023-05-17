@@ -1,0 +1,35 @@
+name: CD
+on: [push]
+
+jobs:
+  cd:
+    name: CD
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Setup repo📦
+        uses: actions/checkout@v3
+      - name: Setup Node 🫂
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+      - name: Setup pnpm ✊
+        uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 8.5.0
+      - name: Install deps
+        run: pnpm i
+      - name: Build for Astro
+        run: pnpm build
+      - name: Remove iranaimono 🗑
+        run: |
+          rm -rf node_modules
+          rm -rf src
+          rm -rf assets
+      - name: Deploy to Deno Deploy 🦕
+        uses: denoland/deployctl@v1
+        with:
+          project: liberluna
+          entrypoint: deno/server.ts
