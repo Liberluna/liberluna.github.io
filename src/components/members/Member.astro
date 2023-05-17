@@ -5,9 +5,9 @@ export interface Props {
 }
 const { profile } = Astro.props
 
-//iconが空の時にgithubに差し替え
-if (profile.icon == "") {
-  profile.icon = "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg";
+//iconが空or指定の時にassetsからnoimageを引っ張る
+if (profile.icon == "" || profile.icon == "noimage") {
+  profile.icon = ".assets/no-image.png";
 }
 ---
 <div class="card w-60 bg-base-100 shadow-xl member break-all">
