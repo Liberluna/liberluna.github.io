@@ -8,7 +8,10 @@ export interface Props {
 }
 const { tag, page } = Astro.props
 
-const posts = await Astro.glob('../../pages/blog/posts/*.md')
+const posts = await Astro.glob('../../pages/blog/posts/*.md').filter(post => {
+  const tags = post.frontmatter.tags ? post.frontmatter.tags : []
+  return tags.includes(tag)
+})
 posts.reverse()
 
 const max = Math.ceil(posts.length / 16)
