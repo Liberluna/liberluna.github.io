@@ -4,14 +4,12 @@ import Layout from '../../../../layouts/Layout.astro'
 import tags from '../../../../../datas/blog-tags.ts'
 
 const { tag, page } = Astro.params;
+const posts = (await Astro.glob('../../posts/*.md')).filter(post => {
+  const tags = post.frontmatter.tags ? post.frontmatter.tags : []
+  return tags.includes(parseInt(tag))
+})
 
-
-export async function getStaticPaths(){
-  const posts = (await Astro.glob('../../posts/*.md')).filter(post => {
-    const tags = post.frontmatter.tags ? post.frontmatter.tags : []
-    const { tag } = Astro.params;
-    return tags.includes(parseInt(tag))
-  })
+export function getStaticPaths(){
   const max = Math.ceil(posts.length / 16)
 
   const result = []
