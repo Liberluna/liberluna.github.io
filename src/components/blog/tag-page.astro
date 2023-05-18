@@ -10,7 +10,7 @@ const { tag, page } = Astro.props
 
 const posts = (await Astro.glob('../../pages/blog/posts/*.md')).filter(post => {
   const tags = post.frontmatter.tags ? post.frontmatter.tags : []
-  console.log(tags,tag,tags.includes([tag]))
+  console.log(tags,[tag],tags.includes(tag))
   return tags.includes(tag)
 })
 posts.reverse()
