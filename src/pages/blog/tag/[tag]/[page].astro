@@ -22,9 +22,7 @@ for(let pageIndex = 0; pageIndex !== max; pageIndex++){
     })
   }
 }
-export function getStaticPaths(){
-  return result
-}
+export const getStaticPaths = () => result
 ---
 <Layout title="Tag">
   <div class="mx-10">
