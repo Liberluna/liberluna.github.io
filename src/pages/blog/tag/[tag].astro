@@ -8,8 +8,8 @@ export const getStaticPaths = async () => {
     params: { tag: String(index) }
   }))
 }
-const { page } = Astro.params;
+const { tag } = Astro.params;
 ---
-<Layout title="LiberBlog">
-  <BlogPage page={parseInt(page || '1')} />
+<Layout title="Tag">
+  tags[tag]
 </Layout>
