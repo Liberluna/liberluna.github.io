@@ -1,5 +1,5 @@
 ---
-import BlogPage from '../../../components/blog/page.astro'
+import TagPage from '../../../components/blog/tag-page.astro'
 import Layout from '../../../layouts/Layout.astro'
 import tags from '../../../../datas/blog-tags.ts'
 
@@ -18,6 +18,7 @@ const { tag } = Astro.params;
       <span>のブログ</span>
     </div>
     <div>
+      <TagPage tag={tag} page={1} />
     </div>
   </div>
 </Layout>
