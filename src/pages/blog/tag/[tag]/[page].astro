@@ -10,19 +10,13 @@ const posts = (await Astro.glob('../../pages/blog/posts/*.md')).filter(post => {
   const tags = post.frontmatter.tags ? post.frontmatter.tags : []
   return tags.includes(parseInt(tag))
 })
-posts.reverse()
 
 const max = Math.ceil(posts.length / 16)
 
-// 1ページスタート( 1page, 2page, 3page...)
-const start = (page - 1) * 16 // 1ページあたり16Posts
-const end = page * 16
-
-const viewPosts = posts.slice(start, end)
 
 export const getStaticPaths = async () => {
   const result = []
-  for(const pageIndex = 0; pageIndex !== viewPosts.length; pageIndex++){
+  for(const pageIndex = 0; pageIndex !== posts.length; pageIndex++){
     for(const tag of tags){
       result.push({
         params: {
