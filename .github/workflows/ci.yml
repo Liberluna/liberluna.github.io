@@ -6,9 +6,7 @@ on:
 
 jobs:
   ci:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js v18
@@ -19,5 +17,15 @@ jobs:
       uses: pnpm/action-setup@v2.2.2
       with:
         version: 8.5.0
-    - run: pnpm i
+    - name: Cache node_modules
+      uses: actions/cache@v3
+      id: node_modules_cache_id
+      env:
+        cache-name: cache-node-modules
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+    - name: Install deps
+      if: ${{ steps.node_modules_cache_id.outputs.cache-hit != 'true' }}
+      run: pnpm i
     - run: pnpm lint
