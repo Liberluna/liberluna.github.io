@@ -6,8 +6,7 @@ import tags from '../../../../../datas/blog-tags.ts'
 const { tag, page } = Astro.params;
 
 
-
-export const getStaticPaths = async () => {
+export async function getStaticPaths(){
   const posts = (await Astro.glob('../../posts/*.md')).filter(post => {
     const tags = post.frontmatter.tags ? post.frontmatter.tags : []
     return tags.includes(parseInt(tag))
