@@ -1,0 +1,81 @@
+---
+import Layout from './Layout.astro'
+
+const { frontmatter } = Astro.props
+
+interface Link {
+  name: string
+  link: string
+  image: string
+}
+export interface Props {
+  frontmatter : {
+    name: string
+    avatar: string
+    links: Link[]
+  }
+}
+
+const avatars = import.meta.glob('../../assets/avatars/*', { import: 'default' })
+const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
+---
+
+<Layout title="Post">
+  <div class="lg:mx-20 mx-10">
+    <div>
+      <div class="flex justify-center">
+        <div class="avatar mx-auto">
+          <div class="w-16 rounded-full">
+            <img src={avatar} class="" />
+          </div>
+        </div>
+      </div>
+      <div class="text-xl text-center">{frontmatter.name}</div>
+      <div class="flex justify-center">
+        {
+          frontmatter.links.map(link => {
+            return <a href={link.link}><img src={link.image} alt={link.name} class="w-6"/></a>
+          })
+        }
+      </div>
+    </div>
+    <div class="markdown">
+      <slot />
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  .markdown h1 {
+    font-size: 2em !important;
+    font-weight: bold;
+  }
+  .markdown h2 {
+    font-size: 1.5em !important;
+    font-weight: bold;
+  }
+  .markdown h3 {
+    font-size: 1.17em !important;
+    font-weight: bold;
+  }
+  .markdown h4 {
+    font-size: 1.00em !important;
+  }
+  .markdown h5 {
+    font-size: 0.83em !important;
+  }
+  .markdown h6 {
+    font-size: 0.67em !important;
+  }
+  .markdown ul{
+    list-style-type: disc !important;
+    margin-left: 1em !important;
+  }
+  .markdown p{
+    margin: 1em 0 !important;
+  }
+  .markdown a{
+    color: #2779F6 !important;
+    text-decoration: underline !important;
+  }
+</style>
