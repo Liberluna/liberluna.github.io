@@ -1,13 +1,12 @@
 ---
 import BlogPage from '../../../components/blog/page.astro'
 import Layout from '../../../layouts/Layout.astro'
+import tags from '../../../../datas/blog-tags.ts'
 
 export const getStaticPaths = async () => {
-  return [
-    {
-      params: { tag: '0' }
-    }
-  ]
+  return tags.map((_,index) => ({
+    params: { tag: String(index) }
+  }))
 }
 const { page } = Astro.params;
 ---
