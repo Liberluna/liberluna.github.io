@@ -1,7 +1,7 @@
 ---
-import TagPage from '../../../components/blog/tag-page.astro'
-import Layout from '../../../layouts/Layout.astro'
-import tags from '../../../../datas/blog-tags.ts'
+import TagPage from '../../../../components/blog/tag-page.astro'
+import Layout from '../../../../layouts/Layout.astro'
+import tags from '../../../../../datas/blog-tags.ts'
 
 const posts = (await Astro.glob('../../pages/blog/posts/*.md')).filter(post => {
   const tags = post.frontmatter.tags ? post.frontmatter.tags : []
