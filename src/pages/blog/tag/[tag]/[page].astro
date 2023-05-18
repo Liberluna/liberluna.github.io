@@ -8,7 +8,7 @@ const { tag, page } = Astro.params;
 
 
 export const getStaticPaths = async () => {
-  const posts = (await Astro.glob('../../../pages/blog/posts/*.md')).filter(post => {
+  const posts = (await Astro.glob('../../posts/*.md')).filter(post => {
     const tags = post.frontmatter.tags ? post.frontmatter.tags : []
     return tags.includes(parseInt(tag))
   })
