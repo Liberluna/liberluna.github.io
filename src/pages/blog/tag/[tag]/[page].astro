@@ -1,0 +1,46 @@
+---
+import TagPage from '../../../components/blog/tag-page.astro'
+import Layout from '../../../layouts/Layout.astro'
+import tags from '../../../../datas/blog-tags.ts'
+
+const posts = (await Astro.glob('../../pages/blog/posts/*.md')).filter(post => {
+  const tags = post.frontmatter.tags ? post.frontmatter.tags : []
+  return tags.includes(parseInt(tag))
+})
+posts.reverse()
+
+const max = Math.ceil(posts.length / 16)
+
+// 1ページスタート( 1page, 2page, 3page...)
+const start = (page - 1) * 16 // 1ページあたり16Posts
+const end = page * 16
+const viewPosts = posts.slice(start, end)
+
+export const getStaticPaths = async () => {
+  const result = []
+  for(const pageIndex = 0; pageIndex !== viewPosts.length; pageIndex++){
+    for(const tag of tags){
+      result.push({
+        params: {
+          page: pageIndex,
+          tag,
+        }
+      })
+    }
+  }
+  return result
+}
+const { tag } = Astro.params;
+---
+<Layout title="Tag">
+  <div class="mx-10">
+    <div class="text-xl">
+      <span>タグ:</span>
+      <span>{tags[tag]}</span>
+      <span>のブログ</span>
+    </div>
+    <div>
+      <TagPage tag={tag} page={1} />
+    </div>
+  </div>
+</Layout>
