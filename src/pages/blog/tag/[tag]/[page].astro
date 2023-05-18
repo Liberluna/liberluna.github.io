@@ -14,7 +14,7 @@ export async function getStaticPaths(){
   const max = Math.ceil(posts.length / 16)
 
   const result = []
-  for(const pageIndex = 0; pageIndex !== max; pageIndex++){
+  for(let pageIndex = 0; pageIndex !== max; pageIndex++){
     for(const tag of tags){
       result.push({
         params: {
