@@ -11,5 +11,13 @@ export const getStaticPaths = async () => {
 const { tag } = Astro.params;
 ---
 <Layout title="Tag">
-  {tags[tag]}
+  <div class="mx-10">
+    <div class="text-xl">
+      <span>タグ:</span>
+      <span>{tags[tag]}</span>
+      <span>のブログ</span>
+    </div>
+    <div>
+    </div>
+  </div>
 </Layout>
