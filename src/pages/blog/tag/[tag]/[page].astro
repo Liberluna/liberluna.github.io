@@ -3,6 +3,9 @@ import TagPage from '../../../../components/blog/tag-page.astro'
 import Layout from '../../../../layouts/Layout.astro'
 import tags from '../../../../../datas/blog-tags.ts'
 
+const { tag, page } = Astro.params;
+
+
 const posts = (await Astro.glob('../../pages/blog/posts/*.md')).filter(post => {
   const tags = post.frontmatter.tags ? post.frontmatter.tags : []
   return tags.includes(parseInt(tag))
@@ -31,7 +34,6 @@ export const getStaticPaths = async () => {
   }
   return result
 }
-const { tag } = Astro.params;
 ---
 <Layout title="Tag">
   <div class="mx-10">
