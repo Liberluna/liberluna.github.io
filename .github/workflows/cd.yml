@@ -22,7 +22,7 @@ jobs:
       - name: Install deps
         run: pnpm i
       - name: Build for Astro
-        run: pnpm run build
+        run: pnpm build
       - name: Remove iranaimono 🗑
         run: |
           rm -rf node_modules
