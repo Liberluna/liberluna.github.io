@@ -14,6 +14,7 @@ const max = Math.ceil(posts.length / 16)
 // 1ページスタート( 1page, 2page, 3page...)
 const start = (page - 1) * 16 // 1ページあたり16Posts
 const end = page * 16
+
 const viewPosts = posts.slice(start, end)
 
 export const getStaticPaths = async () => {
