@@ -3,26 +3,33 @@ import TagPage from '../../../../components/blog/tag-page.astro'
 import Layout from '../../../../layouts/Layout.astro'
 import tags from '../../../../../datas/blog-tags.ts'
 
-const { tag, page } = Astro.params
 
-const posts = (await Astro.glob('../../posts/*.md')).filter(post => {
-  const tags = post.frontmatter.tags ? post.frontmatter.tags : []
-  return tags.includes(parseInt(tag))
-})
-const max = Math.ceil(posts.length / 16)
-
-const result = []
-for(let pageIndex = 0; pageIndex !== max; pageIndex++){
-  for(const tag of tags){
-    result.push({
-      params: {
-        page: pageIndex+1,
-        tag,
-      }
-    })
+export const getStaticPaths = async () => {
+  const result = []
+  for(const tag of Object.keys(tags)){
+    console.log(tag)
+    const postLength = (await Astro.glob('../../posts/*.md')).filter(post => {
+      const postTags = post.frontmatter.tags ? post.frontmatter.tags : []
+      return postTags.includes(parseInt(tag))
+    }).length
+    const pageLength = Math.ceil(postLength / 16)
+    for(let i=0;i!==pageLength;i++){
+      result.push({
+        params: {
+          page: i,
+          tag: tag,
+        }
+      })
+    }
   }
+  return result
 }
-export const getStaticPaths = () => result
+
+const { tag, page } = Astro.params
+const posts = (await Astro.glob('../../posts/*.md')).filter(post => {
+  const postTags = post.frontmatter.tags ? post.frontmatter.tags : []
+  return postTags.includes(parseInt(tag))
+})
 ---
 <Layout title="Tag">
   <div class="mx-10">
