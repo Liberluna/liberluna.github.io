@@ -12,7 +12,7 @@ export interface Props {
     avatar: string
     date: string
     update: string
-    tags: string
+    tags?: string
   }
 }
 const yyymmdd = (date: Date): string => {
@@ -21,7 +21,7 @@ const yyymmdd = (date: Date): string => {
   const d = ('00' + date.getDate()).slice(-2)
   return `${y}-${m}-${d}`
 }
-
+const tags = frontmatter.tags ? frontmatter.tags : []
 const avatars = import.meta.glob('../../assets/avatars/*', { import: 'default' })
 const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
 ---
