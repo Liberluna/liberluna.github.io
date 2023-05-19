@@ -34,6 +34,7 @@ const members = (): Members => [
     posts: ["Leader","Developer"],
     skills: ["C", "C++", "HTML&CSS", "JavaScript","Python", "VBA&VBS(少し)", "KaliLinux"],
     icon: "https://raw.githubusercontent.com/Liberluna/page/main/assets/member-icons/pochi.png",
+    id: "pochi",
     links: [
       {
         url: "https://github.com/Pochi-Liberluna",
@@ -85,6 +86,7 @@ const members = (): Members => [
     posts: ["SubLeader","Developer"],
     skills: ["C", "C++", "HTML&CSS", "JavaScript", "Python", "KaliLinux"],
     icon: "https://raw.githubusercontent.com/Liberluna/page/main/assets/member-icons/bonds.jpg",
+    id: "bonds",
     links: [
       {
         url: "https://github.com/bond417",
@@ -110,6 +112,7 @@ const members = (): Members => [
     posts: ["Sub Leader","Developer"],
     skills: ["Deno", "HTML&CSS", "JavaScript", "Node.js", "Python", "TypeScript", "Shell"],
     icon: "https://raw.githubusercontent.com/Liberluna/page/main/assets/member-icons/nakasyou.png",
+    id: "nakasyou",
     links: [
       {
         url: "https://github.com/nakasyou",

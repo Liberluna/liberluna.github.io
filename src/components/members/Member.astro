@@ -30,6 +30,14 @@ if (profile.icon == "" || profile.icon == "noimage") {
         })
       }
     </div>
+    {
+      profile.id ? (<div class="card-actions">
+        <div>
+          <a href={`/members/member/${profile.id}`} class="btn">Show profile</a>
+        </div>
+      </div>) : null
+    }
+
   </div>
 </div>
 
