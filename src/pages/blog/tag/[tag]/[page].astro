@@ -16,7 +16,7 @@ export const getStaticPaths = async () => {
     for(let i=0;i!==pageLength;i++){
       result.push({
         params: {
-          page: i,
+          page: i+1,
           tag: tag,
         }
       })
