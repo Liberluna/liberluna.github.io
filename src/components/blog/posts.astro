@@ -1,0 +1,35 @@
+---
+import noImage from '../../../assets/no-image.png'
+import Posts from "./posts.astro"
+
+export interface Props {
+  posts: Array<any>
+}
+const { posts } = Astro.props
+
+const thumbnails = await import.meta.glob('../../../assets/thumbnails/*', { import: 'default' })
+---
+{posts.map(async post => {
+  const key = `../../../assets/thumbnails/${post.url.split("/").at(-1)}.png`
+  let thumbnail: string
+  if(post.frontmatter.thumbnail){
+    thumbnail = post.frontmatter.thumbnail
+  }else if(key in thumbnails){
+    thumbnail = await thumbnails[key]()
+  }else{
+    thumbnail = noImage
+  }
+  return <div class="card bg-base-100 shadow-xl">
+    <figure><img
+      src={thumbnail}
+      alt="No image"
+      class=""/></figure>
+    <div class="card-body">
+      <h2 class="card-title">{post.frontmatter.title}</h2>
+      <p>{post.frontmatter.desc}</p>
+      <div class="card-actions justify-end">
+        <a class="btn btn-primary" href={post.url}>See this post</a>
+      </div>
+    </div>
+  </div>
+})}
