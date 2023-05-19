@@ -9,7 +9,19 @@ links:
 ---
 ### Hello! I'm nakasyou!
 nakasyouです。Liberlunaの開発者です。
-#### About
+
+My homepage: [https://nakasyou.github.io](https://nakasyou.github.io)
+### About
 中学二年生。
-### My homepage
-[https://nakasyou.github.io](https://nakasyou.github.io)
+### すきなもの/こと
+- 東方Project - 音楽最高！
+- プログラミング - 中毒性高い!
+- がっこう - すき
+### きらいなもの/こと
+- 花粉 - 花粉自体はがんばってるのにね
+### できること
+- TypeScript/JavaScript
+- Python
+- Deno
+### Vio
+- 2009-11-03 生まれる
