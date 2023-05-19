@@ -1,13 +1,11 @@
 ---
+import tags from '../../../../../datas/blog-tags.ts'
 import TagPage from '../../../../components/blog/tag-page.astro'
 import Layout from '../../../../layouts/Layout.astro'
-import tags from '../../../../../datas/blog-tags.ts'
-
 
 export const getStaticPaths = async () => {
   const result = []
   for(const tag of Object.keys(tags)){
-    console.log(tag)
     const postLength = (await Astro.glob('../../posts/*.md')).filter(post => {
       const postTags = post.frontmatter.tags ? post.frontmatter.tags : []
       return postTags.includes(parseInt(tag))
@@ -26,10 +24,6 @@ export const getStaticPaths = async () => {
 }
 
 const { tag, page } = Astro.params
-const posts = (await Astro.glob('../../posts/*.md')).filter(post => {
-  const postTags = post.frontmatter.tags ? post.frontmatter.tags : []
-  return postTags.includes(parseInt(tag))
-})
 ---
 <Layout title="Tag">
   <div class="mx-10">
@@ -39,7 +33,7 @@ const posts = (await Astro.glob('../../posts/*.md')).filter(post => {
       <span>のブログ</span>
     </div>
     <div>
-      <TagPage tag={tag} page={1} />
+      <TagPage tag={tag} page={page} />
     </div>
   </div>
 </Layout>
