@@ -57,7 +57,7 @@ const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
           <div>Tags:</div>
           <div class="flex flex-wrap">
             {
-              frontmatter.tags.map(tag=>(<div>
+              tags.map(tag=>(<div>
                 <a class="link">{allTags[tag]}</a>
               </div>))
             }
