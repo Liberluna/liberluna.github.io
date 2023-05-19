@@ -33,7 +33,7 @@ const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
       <div class="text-xl text-center">{frontmatter.name}</div>
       <div class="flex justify-center">
         {
-          frontmatter.links.map(link => {
+          (frontmatter.links ? frontmatter.links : []).map(link => {
             return <a href={link.link}><img src={link.image} alt={link.name} class="w-6"/></a>
           })
         }
