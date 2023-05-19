@@ -17,6 +17,7 @@ export type Profile = {
     name: string,
   }>,
   TBD?: string // 更新予定
+  id?: string
 }
 export type Members = Array<Profile>
 
@@ -106,7 +107,7 @@ const members = (): Members => [
       en: "I'm nakasyou. second year of junior high school",
       ja: "性別記入欄が嫌い。14 y/o 中学生"
     },
-    posts: ["Developer"],
+    posts: ["Sub Leader","Developer"],
     skills: ["Deno", "HTML&CSS", "JavaScript", "Node.js", "Python", "TypeScript", "Shell"],
     icon: "https://raw.githubusercontent.com/Liberluna/page/main/assets/member-icons/nakasyou.png",
     links: [
