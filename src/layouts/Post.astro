@@ -1,4 +1,5 @@
 ---
+import allTags from '../../datas/blog-tags.ts'
 import TablerIcons from '../components/TablerIcons.astro'
 import Layout from './Layout.astro'
 
@@ -11,6 +12,7 @@ export interface Props {
     avatar: string
     date: string
     update: string
+    tags?: string
   }
 }
 const yyymmdd = (date: Date): string => {
@@ -19,15 +21,7 @@ const yyymmdd = (date: Date): string => {
   const d = ('00' + date.getDate()).slice(-2)
   return `${y}-${m}-${d}`
 }
-
-// const avatarPath = `../../assets/avatars/${frontmatter.avatar}`
-// const avatarPath = `../../assets/avatars/nakasyou.png`
-// const avatar = (await import(avatarPath)).default
-// const avatar = (avatarPath)
-// console.log(avatar)
-// import avatar from "../../assets/avatars/nakasyou.png"
-// const avatar = import(avatarPath)
-
+const tags = frontmatter.tags ? frontmatter.tags : []
 const avatars = import.meta.glob('../../assets/avatars/*', { import: 'default' })
 const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
 ---
@@ -57,6 +51,16 @@ const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
             <div>
               {yyymmdd(new Date(frontmatter.update))}
             </div>
+          </div>
+        </div>
+        <div class="flex">
+          <div>Tags:</div>
+          <div class="flex flex-wrap">
+            {
+              tags.map(tag=>(<div class="mx-2">
+                <a class="link" href={`/blog/tag/${tag}`}>{allTags[tag]}</a>
+              </div>))
+            }
           </div>
         </div>
       </div>

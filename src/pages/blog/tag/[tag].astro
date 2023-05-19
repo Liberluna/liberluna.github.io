@@ -1,0 +1,24 @@
+---
+import tags from '../../../../datas/blog-tags.ts'
+import TagPage from '../../../components/blog/tag-page.astro'
+import Layout from '../../../layouts/Layout.astro'
+
+export const getStaticPaths = async () => {
+  return tags.map((_,index) => ({
+    params: { tag: String(index) }
+  }))
+}
+const { tag } = Astro.params;
+---
+<Layout title="Tag">
+  <div class="mx-10">
+    <div class="text-xl">
+      <span>タグ:</span>
+      <span>{tags[tag]}</span>
+      <span>のブログ</span>
+    </div>
+    <div>
+      <TagPage tag={tag} page={1} />
+    </div>
+  </div>
+</Layout>
