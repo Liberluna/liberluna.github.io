@@ -17,6 +17,7 @@ export type Profile = {
     name: string,
   }>,
   TBD?: string // 更新予定
+  id?: string
 }
 export type Members = Array<Profile>
 
@@ -33,6 +34,7 @@ const members = (): Members => [
     posts: ["Leader","Developer"],
     skills: ["C", "C++", "HTML&CSS", "JavaScript","Python", "VBA&VBS(少し)", "KaliLinux"],
     icon: "https://raw.githubusercontent.com/Liberluna/page/main/assets/member-icons/pochi.png",
+    id: "pochi",
     links: [
       {
         url: "https://github.com/Pochi-Liberluna",
@@ -84,6 +86,7 @@ const members = (): Members => [
     posts: ["SubLeader","Developer"],
     skills: ["C", "C++", "HTML&CSS", "JavaScript", "Python", "KaliLinux"],
     icon: "https://raw.githubusercontent.com/Liberluna/page/main/assets/member-icons/bonds.jpg",
+    id: "bonds",
     links: [
       {
         url: "https://github.com/bond417",
@@ -106,9 +109,10 @@ const members = (): Members => [
       en: "I'm nakasyou. second year of junior high school",
       ja: "性別記入欄が嫌い。14 y/o 中学生"
     },
-    posts: ["Developer"],
+    posts: ["Sub Leader","Developer"],
     skills: ["Deno", "HTML&CSS", "JavaScript", "Node.js", "Python", "TypeScript", "Shell"],
     icon: "https://raw.githubusercontent.com/Liberluna/page/main/assets/member-icons/nakasyou.png",
+    id: "nakasyou",
     links: [
       {
         url: "https://github.com/nakasyou",
