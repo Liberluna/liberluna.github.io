@@ -22,6 +22,7 @@ import Layout from '../../layouts/Layout.astro'
             placeholder="Inta-netto No Kamisama"
             class="input input-bordered w-full"
             autocomplete="name"
+            required
             name="entry.1496900534" />
         </label>
       </div>
@@ -35,6 +36,7 @@ import Layout from '../../layouts/Layout.astro'
             placeholder="your@example.com"
             class="input input-bordered w-full"
             autocomplete="email" 
+            required
             name="entry.334713759"/>
         </label>
       </div>
@@ -43,7 +45,7 @@ import Layout from '../../layouts/Layout.astro'
           <span class="label-text">自己PR</span>
           <span class="label-text-alt">スキルなど</span>
         </label>
-        <textarea class="textarea textarea-bordered h-24" placeholder="PR" name="entry.1046053211"></textarea>
+        <textarea class="textarea textarea-bordered h-24" placeholder="PR" name="entry.1046053211" required></textarea>
       </div>
       <div>
         <input type="checkbox" required id="member-ok" class="checkbox" />
