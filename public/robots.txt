@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://liberluna.github.io/sitemap-index.xml
