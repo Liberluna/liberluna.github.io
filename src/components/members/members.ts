@@ -139,7 +139,8 @@ const members = (): Members => [
   {
     name: "Ame",
     names: {
-      ja: "Ame"
+      ja: "Ame",
+      en: "Amex"
     },
     descs: {
       en: "Bug Hunter",
