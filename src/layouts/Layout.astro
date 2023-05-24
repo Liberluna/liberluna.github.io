@@ -21,14 +21,16 @@ const { title } = Astro.props;
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-915V40X8MQ"></script>
     <script>
+      /* eslint-disable no-undef */
       // @ts-ignore
       window.dataLayer = window.dataLayer || []; // eslint-disable-line no-unused-vars
       // @ts-ignore
       function gtag(){dataLayer.push(arguments);} // eslint-disable-line no-unused-vars
       // @ts-ignore
-      gtag('js', new Date()); // eslint-disable-line no-unused-vars
+      gtag('js', new Date()); // , no-unused-vars
       // @ts-ignore
       gtag('config', 'G-915V40X8MQ'); // eslint-disable-line no-unused-vars
+      /* eslint-enable no-undef */
     </script>
   </head>
   <body class="break-words">
