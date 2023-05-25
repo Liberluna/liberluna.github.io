@@ -323,8 +323,7 @@ const members = (): Members => [
       ja: "サミット"
     },
     descs: {
-      en: "IIf you can, please bless me with Automatic-h5005, Hi-Uni 5-5050, Mechanica MEC, a FlashPaPa CD and a Solid State Survivor record."
-    },",
+      en: "IIf you can, please bless me with Automatic-h5005, Hi-Uni 5-5050, Mechanica MEC, a FlashPaPa CD and a Solid State Survivor record.",
       ja: "できることなら僕に、Automatic-h5005,ハイユニ5-5050,メカニカMECと、FlashPaPaのCDとソリッドステイトサヴァイヴァーのレコードをお恵みください。"
     },
     posts: ["Developer"],
