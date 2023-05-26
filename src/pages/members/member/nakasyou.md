@@ -23,5 +23,5 @@ My homepage: [https://nakasyou.github.io](https://nakasyou.github.io)
 - TypeScript/JavaScript
 - Python
 - Deno
-### Vio
+### Bio
 - 2009-11-03 生まれる
