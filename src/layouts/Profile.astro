@@ -20,7 +20,7 @@ const avatars = import.meta.glob('../../assets/avatars/*', { import: 'default' }
 const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
 ---
 
-<Layout title="Post">
+<Layout title={`${frontmatter.name} | Liberluna`}>
   <div class="lg:mx-20 mx-10">
     <div>
       <div class="flex justify-center">
