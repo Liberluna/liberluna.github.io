@@ -37,7 +37,7 @@ import Layout from '../../layouts/Layout.astro'
   const gebi = id => document.getElementById(id)
   
   const $contact = document.getElementById("contact")
-  $contact.addEventListener("submit", (event) => {
+  $contact.addEventListener("submit", async (event) => {
   //  "entry.891096931"=name&entry.919277150=email&entry.318988881=ご用件&entry.1961770985=contenr
     event.preventDefault()
     const body = new FormData()
@@ -47,11 +47,13 @@ import Layout from '../../layouts/Layout.astro'
     body.append('entry.318988881', gebi("title").value)
     body.append('entry.1961770985', gebi("content").value)
     
-    fetch('https://docs.google.com/forms/d/e/1FAIpQLSd__UPhhMwRmWIlv5E0kQC5uVFY3wTZjuCMtOLPkIUN7Z-4bA/formResponse', {
+    await fetch('https://docs.google.com/forms/d/e/1FAIpQLSd__UPhhMwRmWIlv5E0kQC5uVFY3wTZjuCMtOLPkIUN7Z-4bA/formResponse', {
       method: 'POST',
       body,
       mode: "no-cors",
-    }).then(alert)
+    })
+    alert("回答を記録しました！")
+    location.reload()
     return false
   })
   //https://docs.google.com/forms/d/e/1FAIpQLSd__UPhhMwRmWIlv5E0kQC5uVFY3wTZjuCMtOLPkIUN7Z-4bA/formResponse
