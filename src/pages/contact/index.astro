@@ -1,7 +1,60 @@
 ---
-import Contact from '../../components/contact/page.astro'
 import Layout from '../../layouts/Layout.astro'
 ---
-<Layout title="Contact">
-  <Contact />
+<Layout title="Contact | Liberluna">
+  <div class="mx-10">
+    <div class="text-2xl">Contact</div>
+    <div>
+      <form id="contact">
+        <div class="my-4">
+          <div>Name</div>
+          <div><input id="name" required class="input input-bordered w-full"></div>
+          <div>ニックネーム可</div>
+        </div>
+        <div class="my-4">
+          <div>Email</div>
+          <div><input id="email" required class="input input-bordered w-full"></div>
+          <div>返信に使わせていただきます</div>
+        </div>
+        <div class="my-4">
+          <div>Title</div>
+          <div><input id="title" required class="input input-bordered w-full"></div>
+          <div>完結にお願いします。</div>
+        </div>
+        <div class="my-4">
+          <div>Content</div>
+          <div><textarea id="content" required class="textarea textarea-bordered w-full" /></div>
+          <div>本文です。</div>
+        </div>
+        <div class="my-4">
+          <input class="btn" value="Submit!" type="submit">
+        </div>
+      </form>
+    </div>
+  </div>
 </Layout>
+<script>
+  const gebi = id => document.getElementById(id)
+  
+  const $contact = document.getElementById("contact")
+  $contact.addEventListener("submit", async (event) => {
+  //  "entry.891096931"=name&entry.919277150=email&entry.318988881=ご用件&entry.1961770985=contenr
+    event.preventDefault()
+    const body = new FormData()
+    
+    body.append('entry.891096931', gebi("name").value)
+    body.append('entry.919277150', gebi("email").value)
+    body.append('entry.318988881', gebi("title").value)
+    body.append('entry.1961770985', gebi("content").value)
+    
+    await fetch('https://docs.google.com/forms/d/e/1FAIpQLSd__UPhhMwRmWIlv5E0kQC5uVFY3wTZjuCMtOLPkIUN7Z-4bA/formResponse', {
+      method: 'POST',
+      body,
+      mode: "no-cors",
+    })
+    alert("回答を記録しました！")
+    location.reload()
+    return false
+  })
+  //https://docs.google.com/forms/d/e/1FAIpQLSd__UPhhMwRmWIlv5E0kQC5uVFY3wTZjuCMtOLPkIUN7Z-4bA/formResponse
+</script>
