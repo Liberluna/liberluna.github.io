@@ -37,8 +37,9 @@ import Layout from '../../layouts/Layout.astro'
   const gebi = id => document.getElementById(id)
   
   const $contact = document.getElementById("contact")
-  $contact.addEventListener("submit", () => {
+  $contact.addEventListener("submit", (event) => {
   //  "entry.891096931"=name&entry.919277150=email&entry.318988881=ご用件&entry.1961770985=contenr
+    event.preventDefault()
     const body = new FormData()
     
     body.append('entry.891096931', gebi("name").value)
