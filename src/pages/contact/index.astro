@@ -1,6 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 ---
-<Layout title="Contact">
-  <Contact />
+<Layout title="Contact | Liberluna">
+  <div class="mx-10">
+    <div class="text-2xl">Contact</div>
+    <div>
+      <form id="contact">
+        <div>
+          <input class="button" value="Submit!" type="submit">
+        </div>
+      </form>
+    </div>
+  </div>
 </Layout>
+<script>
+  const $contact = document.getElementById("contact")
+  $contact.addEventListener("submit", () => {
+    alert("submit!")
+  })
+</script>
