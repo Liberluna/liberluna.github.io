@@ -34,9 +34,22 @@ import Layout from '../../layouts/Layout.astro'
   </div>
 </Layout>
 <script>
+  const gebi = id => document.getElementById(id)
+  
   const $contact = document.getElementById("contact")
   $contact.addEventListener("submit", () => {
-    alert("submit!")
+    "entry.891096931"=name&entry.919277150=email&entry.318988881=ご用件&entry.1961770985=contenr
+    const body = new FormData()
+    
+    body.append('entry.891096931', gebi("name"))
+    body.append('entry.919277150', gebi("email"))
+    body.append('entry.318988881', gebi("title"))
+    body.append('entry.1961770985', gebi("content"))
+    
+    fetch('https://docs.google.com/forms/d/e/1FAIpQLSd__UPhhMwRmWIlv5E0kQC5uVFY3wTZjuCMtOLPkIUN7Z-4bA/formResponse', {
+      method: 'POST',
+      body,
+    }).then(alert)
   })
   //https://docs.google.com/forms/d/e/1FAIpQLSd__UPhhMwRmWIlv5E0kQC5uVFY3wTZjuCMtOLPkIUN7Z-4bA/formResponse
 </script>
