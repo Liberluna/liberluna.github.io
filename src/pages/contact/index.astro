@@ -7,7 +7,27 @@ import Layout from '../../layouts/Layout.astro'
     <div>
       <form id="contact">
         <div>
-          <input class="button" value="Submit!" type="submit">
+          <div>Name</div>
+          <div><input id="name" required></div>
+          <div>ニックネーム可</div>
+        </div>
+        <div>
+          <div>Email</div>
+          <div><input id="email" required></div>
+          <div>返信に使わせていただきます</div>
+        </div>
+        <div>
+          <div>Title</div>
+          <div><input id="title" required></div>
+          <div>完結にお願いします。</div>
+        </div>
+        <div>
+          <div>Content</div>
+          <div><textarea id="content" required /></div>
+          <div>本文です。</div>
+        </div>
+        <div>
+          <input class="btn" value="Submit!" type="submit">
         </div>
       </form>
     </div>
@@ -18,4 +38,5 @@ import Layout from '../../layouts/Layout.astro'
   $contact.addEventListener("submit", () => {
     alert("submit!")
   })
+  //https://docs.google.com/forms/d/e/1FAIpQLSd__UPhhMwRmWIlv5E0kQC5uVFY3wTZjuCMtOLPkIUN7Z-4bA/formResponse
 </script>
