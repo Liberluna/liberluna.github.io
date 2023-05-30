@@ -437,7 +437,7 @@ const members = (): Members => [
       ja: "いつも元気な11月3日生まれ。ってのは建前で(ﾟ∀ﾟ)ｱﾋｬがただただ好きな変人です！"
     },
     posts: ["Developer"],
-    skills: ["hijacked person helper","Scratch","Clang","Batch","Ruby"],
+    skills: ["hijacked person helper","Scratch","Batch","C","Ruby"],
     icon: "https://raw.githubusercontent.com/Liberluna/page/main/assets/member-icons/movenap.png",
     links: [
       {
