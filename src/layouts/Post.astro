@@ -15,6 +15,7 @@ export interface Props {
     tags?: string
     thumbnail?: string
     desc: string
+    memberID?: string
   }
 }
 const yyymmdd = (date: Date): string => {
@@ -38,7 +39,12 @@ const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
             <img src={avatar} />
           </div>
         </div>
-        <div class="text-xl">{frontmatter.author}</div>
+        <div class="text-xl">
+          {
+            frontmatter.memberID? 
+              <a class="link" href={`/members/member/${frontmatter.memberID}`}>{frontmatter.author}</a> : frontmatter.author
+          }
+        </div>
       </div>
       <div>
         <div class="flex">
