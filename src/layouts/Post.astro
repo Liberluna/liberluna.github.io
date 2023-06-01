@@ -42,8 +42,7 @@ const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
         <div class="text-xl">
           {
             frontmatter.memberID? 
-              <a class="link" href={`/members/member/${frontmatter.memberID}`}>{frontmatter.author}</a> : 
-              {frontmatter.author}
+              <a class="link" href={`/members/member/${frontmatter.memberID}`}>{frontmatter.author}</a> : frontmatter.author
           }
         </div>
       </div>
