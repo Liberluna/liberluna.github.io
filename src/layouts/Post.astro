@@ -13,6 +13,8 @@ export interface Props {
     date: string
     update: string
     tags?: string
+    thumbnail?: string
+    desc: string
   }
 }
 const yyymmdd = (date: Date): string => {
@@ -26,7 +28,7 @@ const avatars = import.meta.glob('../../assets/avatars/*', { import: 'default' }
 const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
 ---
 
-<Layout title={`${frontmatter.title} | Liberluna Blog`}>
+<Layout title={`${frontmatter.title} | Liberluna Blog`} image={frontmatter.thumbnail} description={frontmatter.desc}>
   <div class="lg:mx-20 mx-10">
     <div class="text-2xl">{frontmatter.title}</div>
     <div>
