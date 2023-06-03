@@ -13,6 +13,9 @@ dependencies:
   '@astrojs/vue':
     specifier: ^2.2.1
     version: 2.2.1(@babel/core@7.21.8)(astro@2.4.1)(vite@4.3.5)(vue@3.3.4)
+  '@tabler/icons-vue':
+    specifier: ^2.21.0
+    version: 2.21.0(vue@3.3.4)
   astro:
     specifier: ^2.4.1
     version: 2.4.1
@@ -951,6 +954,19 @@ packages:
     dependencies:
       deepmerge: 4.3.1
       escalade: 3.1.1
+    dev: false
+
+  /@tabler/icons-vue@2.21.0(vue@3.3.4):
+    resolution: {integrity: sha512-9JWJdEk7vb+vwszziF1xgUtjAikp1D6mi2Utb+5nFm7fZ01K9qqam15UO0FI4jV4iI4ubSv62Q2yst6/Yt99Fw==}
+    peerDependencies:
+      vue: '>=3.0.1'
+    dependencies:
+      '@tabler/icons': 2.21.0
+      vue: 3.3.4
+    dev: false
+
+  /@tabler/icons@2.21.0:
+    resolution: {integrity: sha512-XKrTEHMX6XzCOwcOU8ZNA+Xqm51sI+0abn2jk1fyQUpWeFnGsOEiC+fpQ4EISc+v+U9jqgTSbh8bZ6JBuKU5sw==}
     dev: false
 
   /@types/babel__core@7.20.0:
