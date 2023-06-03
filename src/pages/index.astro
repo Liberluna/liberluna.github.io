@@ -1,6 +1,8 @@
 ---
 import LiberlunaLogo from '../../assets/liberluna-logo.svg'
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
+import Posts from '../components/blog/post-side.astro'
+
 ---
 
 <Layout title="Liberluna">
@@ -65,6 +67,9 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="text-center">
         <div class="text-xl">月の公転もLiberlunaの開発も止まりません。</div>
+      </div>
+      <div>
+        <Posts n={8} />
       </div>
     </div>
    </div>
