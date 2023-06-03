@@ -149,6 +149,7 @@ const members = (): Members => [
     posts: ["Developer","Bug Hunter"],
     skills: ["Brainfuck", "C#", "HTML&CSS", "JS&TS", "PHP", "Python", "Bug Hunter" , "R"],
     icon: "https://github.com/EdamAme-x.png",
+    id: "ame",
     links: [
       {
         url: "https://github.com/EdamAme-x",
