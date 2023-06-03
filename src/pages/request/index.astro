@@ -1,1 +1,60 @@
-
+---
+import Layout from '../../layouts/Layout.astro'
+---
+<Layout title="request | Liberluna">
+  <div class="mx-10">
+    <div class="text-2xl">Request</div>
+    <div>
+      <form id="request">
+        <div class="my-4">
+          <div>Name</div>
+          <div><input id="name" required class="input input-bordered w-full"></div>
+          <div>お名前</div>
+        </div>
+        <div class="my-4">
+          <div>Email</div>
+          <div><input id="email" required class="input input-bordered w-full"></div>
+          <div>返信に使わせていただきます</div>
+        </div>
+        <div class="my-4">
+          <div>Title</div>
+          <div><input id="title" required class="input input-bordered w-full"></div>
+          <div>依頼の題名をお願いします。</div>
+        </div>
+        <div class="my-4">
+          <div>Content</div>
+          <div><textarea id="content" required class="textarea textarea-bordered w-full" /></div>
+          <div>依頼の内容や、希望する条件をお願いします。</div>
+        </div>
+        <div class="my-4">
+          <input class="btn" value="送信" type="submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</Layout>
+<script>
+  const gebi = id => document.getElementById(id)
+  
+  const $contact = document.getElementById("request")
+  $contact.addEventListener("submit", async (event) => {
+  //  "entry.891096931"=name&entry.919277150=email&entry.318988881=ご用件&entry.1961770985=contenr
+    event.preventDefault()
+    const body = new FormData()
+    
+    body.append('entry.891096931', gebi("name").value)
+    body.append('entry.919277150', gebi("email").value)
+    body.append('entry.318988881', gebi("title").value + "type:依頼")
+    body.append('entry.1961770985', gebi("content").value)
+    
+    await fetch('https://docs.google.com/forms/d/e/1FAIpQLSd__UPhhMwRmWIlv5E0kQC5uVFY3wTZjuCMtOLPkIUN7Z-4bA/formResponse', {
+      method: 'POST',
+      body,
+      mode: "no-cors",
+    })
+    alert("依頼を受けました。")
+    location.reload()
+    return false
+  })
+  //https://docs.google.com/forms/d/e/1FAIpQLSd__UPhhMwRmWIlv5E0kQC5uVFY3wTZjuCMtOLPkIUN7Z-4bA/formResponse
+</script>
