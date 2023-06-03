@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/Profile.astro
 name: Def4Root
-avatar: "https://def4root.com/assets/def4root.jpg"
+avatar: "def4root.png"
 ---
 使用言語は **Golang,Python,PHP,JavaScript,HTML&CSS,NLP**
 
