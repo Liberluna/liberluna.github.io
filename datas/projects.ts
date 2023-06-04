@@ -2,7 +2,6 @@ export interface Project {
   title: string
   desc: string
   link: string
-  image?: string
 }
 
 export const projects: Project[] = [
@@ -13,7 +12,7 @@ export const projects: Project[] = [
   },
   {
     title: "HackTo",
-    desc: "あなたのハッキング能力を...",
+    desc: "Try hacking HackTo.",
     link: "",
   },
 ]
