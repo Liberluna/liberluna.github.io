@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/Profile.astro
 name: movenap
-avatar: "pochi.png"
+avatar: "anonymous.png"
 links: 
   - name: GitHub
     link: https://github.com/movenap
