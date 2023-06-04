@@ -1,6 +1,7 @@
 ---
 import { projects } from '../../../datas/projects.ts'
 import Layout from '../../layouts/Layout.astro'
+
 ---
 <Layout title="Projects | Liberluna">
   <div class="mx-10">
@@ -10,7 +11,6 @@ import Layout from '../../layouts/Layout.astro'
         projects.map( project => {
           return <div class="card card-side bg-base-100 shadow-xl my-5">
             <a href={project.link}>
-              <figure><img src={project.img} alt="NO IMAGE"/></figure>
               <div class="card-body">
                 <h2 class="card-title">{project.title}</h2>
                 <p>{project.desc}</p>
