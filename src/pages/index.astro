@@ -1,6 +1,7 @@
 ---
 import LiberlunaLogo from '../../assets/liberluna-logo.svg'
-import Layout from '../layouts/Layout.astro';
+import Posts from '../components/blog/post-side.astro'
+import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout title="Liberluna">
@@ -60,6 +61,11 @@ import Layout from '../layouts/Layout.astro';
         <div>
           <div>Liberlunaの開発/活動は止まりません。</div>
           <div>メンバーがいなくならない限り</div>
+        </div>
+      </div>
+      <div>
+        <div class="carousel rounded-box gap-4">
+          <Posts n={8} />
         </div>
       </div>
     </div>
