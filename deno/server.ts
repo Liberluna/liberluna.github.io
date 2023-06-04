@@ -14,4 +14,11 @@ app.get(
   })
 )
 
+app.use(
+  '/private',
+  serveStatic({
+    root: './private',
+  })
+)
+
 serve(app.fetch)
