@@ -408,6 +408,7 @@ const members = (): Members => [
         icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/twitter.svg",
       },
     ],
+    id: "md5",
   },
   {
     name: "DDoSer",
