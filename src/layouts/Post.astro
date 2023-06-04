@@ -4,7 +4,6 @@ import TablerIcons from '../components/TablerIcons.astro'
 import Layout from './Layout.astro'
 
 const { frontmatter } = Astro.props
-const blank:[] = ["CVE","2189"];
 
 export interface Props {
   frontmatter : {
@@ -78,17 +77,6 @@ const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
     <div class="markdown" id="main-text">
       <slot />
     </div>
-    <script>
-      setTimeout(()=>{
-          let blank = {blank};
-          let text = document.querySelector("#main-text").innerHTML; 
-          for (let i=0;i<blank.length;i++) {
-            text = text.replaceAll(blank[i],"***");
-          }
-          document.querySelector("#main-text").innerHTML = text;
-      },150); //async
-                   
-    </script>
   </div>
 </Layout>
 
