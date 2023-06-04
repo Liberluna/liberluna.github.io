@@ -449,6 +449,7 @@ const members = (): Members => [
         icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/scratch.svg",
       },
     ],
+    id: "movenap",
   },
 ]
 
