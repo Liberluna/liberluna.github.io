@@ -14,4 +14,6 @@ app.get(
   })
 )
 
-serve(app.fetch)
+app.use("/private", (c) => c.text("hoge hoge"));
+
+serve(app.fetch())
