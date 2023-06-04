@@ -11,4 +11,5 @@ export default <string[]> [
   "JavaScript", // 7
   "TypeScript", // 8
   "HackTo", // 9
+  "著作権", // 10
 ]
