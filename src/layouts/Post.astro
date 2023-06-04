@@ -35,7 +35,7 @@ const censorText = (text: string, keyword: string): string => {
   return text.replace(r, '***')
 }
 // テスト機能
-const censoredSlot = censorText(slot, 'CVE')
+const censoredSlot = censorText(slot(), 'CVE')
 
 <Layout title={`${frontmatter.title} | Liberluna Blog`} image={frontmatter.thumbnail}　description={frontmatter.desc}>
   <div class="lg:mx-20 mx-10">
