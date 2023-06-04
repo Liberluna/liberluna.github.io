@@ -6,7 +6,7 @@ import Layout from './Layout.astro'
 const { frontmatter } = Astro.props
 
 export interface Props {
-  frontmatter : {
+  frontmatter: {
     title: string
     author: string
     avatar: string
@@ -18,18 +18,26 @@ export interface Props {
     memberID?: string
   }
 }
+
 const yyymmdd = (date: Date): string => {
   const y = date.getFullYear()
   const m = ('00' + (date.getMonth() + 1)).slice(-2)
   const d = ('00' + date.getDate()).slice(-2)
   return `${y}-${m}-${d}`
 }
+
 const tags = frontmatter.tags ? frontmatter.tags : []
 const avatars = import.meta.glob('../../assets/avatars/*', { import: 'default' })
 const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
----
 
-<Layout title={`${frontmatter.title} | Liberluna Blog`} image={frontmatter.thumbnail} description={frontmatter.desc}>
+const censorText = (text: string, keyword: string): string => {
+  const r = new RegExp(keyword, 'gi')
+  return text.replace(r, '***')
+}
+// テスト機能
+const censoredSlot = censorText(slot, 'CVE')
+
+<Layout title={`${frontmatter.title} | Liberluna Blog`} image={frontmatter.thumbnail}　description={frontmatter.desc}>
   <div class="lg:mx-20 mx-10">
     <div class="text-2xl">{frontmatter.title}</div>
     <div>
@@ -40,42 +48,47 @@ const avatar = await avatars[`../../assets/avatars/${frontmatter.avatar}`]()
           </div>
         </div>
         <div class="text-xl">
-          {
-            frontmatter.memberID? 
-              <a class="link" href={`/members/member/${frontmatter.memberID}`}>{frontmatter.author}</a> : frontmatter.author
-          }
+          {frontmatter.memberID ? (
+            <a class="link" href={`/members/member/${frontmatter.memberID}`}>
+              {frontmatter.author}
+            </a>
+          ) : (
+            frontmatter.author
+          )}
         </div>
       </div>
       <div>
         <div class="flex">
           <div class="flex">
-            <div><TablerIcons icon="calendar-event" /></div>
             <div>
-              {yyymmdd(new Date(frontmatter.date))}
+              <TablerIcons icon="calendar-event" />
             </div>
+            <div>{yyymmdd(new Date(frontmatter.date))}</div>
           </div>
           <div class="flex">
-            <div><TablerIcons icon="reload" /></div>
             <div>
-              {yyymmdd(new Date(frontmatter.update))}
+              <TablerIcons icon="reload" />
             </div>
+            <div>{yyymmdd(new Date(frontmatter.update))}</div>
           </div>
         </div>
         <div class="flex">
           <div>Tags:</div>
           <div class="flex flex-wrap">
-            {
-              tags.map(tag=>(<div class="mx-2">
-                <a class="link" href={`/blog/tag/${tag}`}>{allTags[tag]}</a>
-              </div>))
-            }
+            {tags.map(tag => (
+              <div class="mx-2">
+                <a class="link" href={`/blog/tag/${tag}`}>
+                  {allTags[tag]}
+                </a>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
     <hr />
     <div class="markdown">
-      <slot />
+      {censoredSlot}
     </div>
   </div>
 </Layout>
