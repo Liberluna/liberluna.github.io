@@ -34,9 +34,5 @@ const thumbnails = await import.meta.glob('../../../assets/thumbnails/*', { impo
         <a class="btn btn-primary" href={post.url}>See this post</a>
       </div>
     </div>
-    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href={"#post-" + (i - 1)} class="btn btn-circle">❮</a> 
-      <a href={"#post-" + (i + 1)} class="btn btn-circle">❯</a>
-    </div>
   </div>
 })}
