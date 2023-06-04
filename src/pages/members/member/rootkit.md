@@ -1,6 +1,16 @@
+---
+layout: ../../../layouts/Profile.astro
+name: rootkit
+avatar: "rootkit.png"
+links: 
+  - name: GitHub
+    link: https://github.com/koko1928
+    image: https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg
+---
+
 # 自己紹介
 
-## 経歴
+## 情報
 
 - 名前: rootkit
 
