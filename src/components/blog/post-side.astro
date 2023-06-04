@@ -22,7 +22,7 @@ const thumbnails = await import.meta.glob('../../../assets/thumbnails/*', { impo
   }else{
     thumbnail = noImage
   }
-  return <div class="card bg-base-100 shadow-xl w-full carousel-item w-1/2">
+  return <div class="card bg-base-100 shadow-xl carousel-item w-1/2">
     <figure><img
       src={thumbnail}
       alt="No image"
