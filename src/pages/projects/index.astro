@@ -1,33 +1,24 @@
 ---
+import { projects } from '../../../datas/projects.ts'
 import Layout from '../../layouts/Layout.astro'
-//取り敢えずハードコーディング
-/*
-export default projects:projects = [
-  {
-    title: "LunaNovaCSS",
-    desc: "JSでObjectをCSSに動的に変換する 新感覚のCSSフレームワーク",
-    link: "https://github.com/Liberluna/LunaNovaCSS",
-  },
-]
-*/
-
 ---
 <Layout title="Projects | Liberluna">
   <div class="mx-10">
     <div class="text-3xl text-center mt-10 mb-10">Projects</div>
-    <div class="w-custom flex flex-wrap" style="width: calc(100vw - 5rem);">
-      <div class="w-full sm:w-1/2">
-        <a href="https://github.com/Liberluna/LunaNovaCSS" class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">LunaNovaCSS</h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400">JSでObjectをCSSに動的に変換する 新感覚のCSSフレームワーク</p> 
-        </a>
-      </div>
-     
-      <div class="w-full sm:w-1/2">
-        <a href="https://github.com/Liberluna/HackTo" class="block p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">HackTo</h5>
-          <p class="font-normal text-gray-700 dark:text-gray-400">サイト,ファイルを解析し、隠されたflagを探す。「CTFサイト」</p> 
-        </a>
-      </div>
+    <div class="grid grid-cols-1 gap-4">
+      {
+        projects.map( project => {
+          return <div class="card card-side bg-base-100 shadow-xl my-5">
+            <a href={project.link}>
+              <figure><img src={project.img} alt="NO IMAGE"/></figure>
+              <div class="card-body">
+                <h2 class="card-title">{project.title}</h2>
+                <p>{project.desc}</p>
+              </div>
+            </a>
+          </div>
+        })
+      }
+    </div>
   </div>
 </Layout>
