@@ -15,7 +15,7 @@ app.get(
 )
 
 app.use(
-  '/private',
+  '/private/*',
   serveStatic({
     root: './private',
   })
