@@ -26,13 +26,15 @@ const projects: Project[] = [
     <div>
       {
         projects.map( project => {
-          return <a href={project.link}><div class="card card-side bg-base-100 shadow-xl">
-            <figure><img src={project.img} alt="NO IMAGE"/></figure>
-            <div class="card-body">
-              <h2 class="card-title">{project.title}</h2>
-              <p>{project.desc}</p>
+          return <a href={project.link} class="my-5">
+            <div class="card card-side bg-base-100 shadow-xl">
+              <figure><img src={project.img} alt="NO IMAGE"/></figure>
+              <div class="card-body">
+                <h2 class="card-title">{project.title}</h2>
+                <p>{project.desc}</p>
+              </div>
             </div>
-          </div></a>
+          </a>
         })
       }
     </div>
