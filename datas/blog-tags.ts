@@ -1,6 +1,4 @@
-/*! WARN  WARN  WARN !*\
- !   順番入れ替え禁止  !
-\*! WARN  WARN  WARN !*/
+// [Warn] 順番入れ替え禁止
 
 export default <string[]> [
   "プログラミング", // No.0
