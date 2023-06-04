@@ -1,4 +1,5 @@
 ---
+import LiberlunaLogoWhite from '../../assets/liberluna-logo-white.svg'
 import LiberlunaLogo from '../../assets/liberluna-logo.svg'
 import Footer from '../components/Footer.astro'
 
@@ -55,7 +56,8 @@ const { title, description, image } = Astro.props
           </div>
           <div class="flex-1 px-2 mx-2">
             <a href="/">
-              <img src={LiberlunaLogo} alt="Liberluna" class="h-9" />
+              <img src={LiberlunaLogo} alt="Liberluna" class="h-9 dark:hidden" />
+              <img src={LiberlunaLogoWhite} alt="Liberluna" class="h-9 light-hidden" />
             </a>
           </div>
           <div class="flex-none hidden lg:block">
@@ -93,5 +95,10 @@ const { title, description, image } = Astro.props
 <style>
   .header{
     z-index: 100;
+  }
+  @media (prefers-color-scheme: light) {
+    .light-hidden {
+      display: none;
+    }
   }
 </style>
