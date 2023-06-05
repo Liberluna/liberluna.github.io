@@ -4,7 +4,7 @@ name: MD5
 avatar: "MD5.png"
 links:
 ---
-使用可能な言語は、**Python,RUby,C++,C#**
+使用可能な言語は、**Python,Ruby,C++,C#**
 ## 経歴
 小学校四年生：パソコンを買ってもらう。特にその時は興味関心は無かった。
 
