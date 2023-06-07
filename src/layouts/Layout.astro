@@ -13,6 +13,7 @@ export interface Props {
     image?: string
     url?: string
     description?: string
+    twCard?: string
   }
 }
 
@@ -68,6 +69,9 @@ const { title,
     {
       // Site name
       <meta property="og:site_name" content="Liberluna" />
+    }
+    {
+      ogp.twCard && <meta name="twitter:card" content={ogp.twCard} />
     }
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-915V40X8MQ"></script>
