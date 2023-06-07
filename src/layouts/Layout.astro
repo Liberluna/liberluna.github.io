@@ -6,14 +6,21 @@ import Footer from '../components/Footer.astro'
 export interface Props {
   title: string
   description?: string
-  image?: string
   meta?: Record<string, string>[]
+  ogp: {
+    title?: string
+    type?: string
+    image? string
+    url?: string
+    description?: string
+  }
 }
 
 const { title,
        description,
        image,
        meta = [],
+       ogp,
       } = Astro.props
 ---
 
@@ -39,6 +46,30 @@ const { title,
       })
     }
     <!-- OGP -->
+    {
+      // Title
+      ogp.title ? <meta property="og:title" content={ogp.title} /> : <meta property="og:title" content={title} />
+    }
+    {
+      // Type
+      <meta property="og:type" content={ogp.type ? ogp.title : "website"} />
+    }
+    {
+      // Image
+      <meta property="og:image" content={ogp.image ? ogp.image : ""} />
+    }
+    {
+      // URL
+      <meta property="og:image" content={ogp.url ? ogp.url : Astro.url.toString()} />
+    }
+    {
+      // Description
+      <meta property="og:description" content={ogp.description ? ogp.description : description} />
+    }
+    {
+      // Site name
+      <meta property="og:site_name" content="Liberluna" />
+    }
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-915V40X8MQ"></script>
     <script>
@@ -55,7 +86,6 @@ const { title,
     </script>
   </head>
   <body class="break-words">
-    { Astro.url.toString() }
     <div class="drawer">
       <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
       <label for="my-drawer-3"></label>
