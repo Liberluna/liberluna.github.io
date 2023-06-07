@@ -6,15 +6,27 @@ import Footer from '../components/Footer.astro'
 export interface Props {
   title: string
   description?: string
-  image?: string
+  meta?: Record<string, string>[]
+  ogp: {
+    title?: string
+    type?: string
+    image?: string
+    url?: string
+    description?: string
+    twCard?: string
+  }
 }
 
-const { title, description, image } = Astro.props
+const { title,
+       description,
+       meta = [],
+       ogp = {},
+      } = Astro.props
 ---
 
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
+  <head prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Security-Policy" content="script-src 'none'" />
@@ -24,14 +36,42 @@ const { title, description, image } = Astro.props
     <meta name="generator" content={Astro.generator} />
     <link rel="sitemap" href="/sitemap-index.xml">
     <title>{title}</title>
+    
+    { description && <meta name="description" content={description} /> }
+    
+    <!-- Free meta tags -->
     {
-      description? <meta name="description" content={description} /> : null
+      meta.map( tag => {
+        return <meta {...tag} />
+      })
     }
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:site_name" content="Liberluna" />
+    <!-- OGP -->
     {
-      image? <meta property="og:image" content={image} /> : null
+      // Title
+      ogp.title ? <meta property="og:title" content={ogp.title} /> : <meta property="og:title" content={title} />
+    }
+    {
+      // Type
+      <meta property="og:type" content={ogp.type ? ogp.type : "website"} />
+    }
+    {
+      // Image
+      <meta property="og:image" content={ogp.image ? ogp.image : ""} />
+    }
+    {
+      // URL
+      <meta property="og:url" content={ogp.url ? ogp.url : Astro.url.toString()} />
+    }
+    {
+      // Description
+      <meta property="og:description" content={ogp.description ? ogp.description : description} />
+    }
+    {
+      // Site name
+      <meta property="og:site_name" content="Liberluna" />
+    }
+    {
+      ogp.twCard && <meta name="twitter:card" content={ogp.twCard} />
     }
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-915V40X8MQ"></script>
