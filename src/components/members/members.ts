@@ -365,7 +365,7 @@ const members = (): Members => [
     ],
   },
   {
-    name: "Suteki(一時)",
+    name: "Suteki(一時活動休止中)",
     names: {
       ja: "素敵"
     },
