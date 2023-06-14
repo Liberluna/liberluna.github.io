@@ -13,6 +13,6 @@ export const projects: Project[] = [
   {
     title: "HackTo",
     desc: "Try hacking HackTo.",
-    link: "./hogex",
+    link: "./403",
   },
 ]
