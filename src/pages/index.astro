@@ -11,64 +11,61 @@ import Layout from '../layouts/Layout.astro'
         <img src={LiberlunaLogo} class="mx-auto" alt="Liberluna" />
       </div>
       <div class="mx-auto text-center">We hack all...</div>
-      <div class="text-center">
-        Liberlunaは、主に学生が集う、ハッカーサークルです。
+      <div class="text-center text-xl">
+        Liberlunaは、
+        <span class="text-red-400">学生中心</span>
+        の、ハッカーサークルです。
       </div>
     </div>
-    <br />
     <div>
-      <div>
-        <div class="text-xl text-left">特技を生かす。</div>
-        <div class="text-left">
+      <div class="text-center my-7">
+        <div class="text-xl leading-loose">さまざまな
+          <span class="underline decoration-2 decoration-pink-500">メンバー</span>
+        </div>
+        <div>
           <div>
-            Liberlunaのメンバーは、それぞれ、サイバーセキュリティからリバースエンジニアリング、<br/>
-              Web開発からソフトウェア開発などの、多種多様のスキルを持っています。
-          </div>
-          <div>
-            それらを活かし、開発を行なっています。
+            Liberlunaのメンバーは、それぞれ、サイバーセキュリティからリバースエンジニアリング、
+            Web開発からソフトウェア開発などの、多種多様のスキルを持っています。
           </div>
         </div>
       </div>
-      <br />
-      <div class="text-right">
-        <div class="text-xl">プライベートは個人情報のみ</div>
+      <div class="text-center my-7">
+        <div class="text-xl leading-loose">
+          <span class="underline decoration-2 decoration-pink-500">プライベート</span>は、個人情報のみ</div>
         <div>
           <div>Liberlunaのプロジェクトは、ほぼ全てがOSSです。</div>
           <div>コードがオープンなことで、信頼性を高めます。</div>
           <div>コードはオープンですが、個人情報は守ります。<br/>プライベートは、個人情報のみ。</div>
         </div>
       </div>
-      <br />
-      <div class="text-left">
-        <div class="text-xl">企業ですか？ No.</div>
+      <div class="text-center my-7">
+        <div class="text-xl leading-loose">企業ではありません</div>
         <div>
           <div>Liberlunaは、サークルです。</div>
           <div>そのため、お金儲けは第一ではありません。</div>
         </div>
       </div>
-      <br />
-      <div class="text-right">
-        <div class="text-xl">最高の体験を追求</div>
+      <div class="text-center my-7">
+        <div class="text-xl leading-loose">よりよい体験を</div>
         <div>
           <div>Liberlunaのサービスは、全ての不満や意見を受け付けます。</div>
           <div>ユーザーの声を聞き、改善し続けます。</div>
           <div>またOSSの場合、Pull Requestを提出することもできます。</div>
         </div>
       </div>
-      <br />
-      <div class="text-left">
-        <div class="text-xl">Non-stop Development</div>
+      <!--<div class="text-center my-7">
+        <div class="text-xl leading-loose">Non-stop Development</div>
         <div>
           <div>Liberlunaの開発/活動は止まりません。</div>
           <div>メンバーがいなくならない限り</div>
         </div>
-      </div>
-      <div class="mt-5">
-        <div class="text-2xl text-center mb-5">最新記事</div>
-        <div class="carousel rounded-box gap-4">
-          <Posts n={8} />
-        </div>
-      </div>
+      </div>-->
     </div>
+    <div class="mt-5">
+      <div class="text-2xl text-center mb-5">最新記事</div>
+      <div class="carousel rounded-box gap-4">
+        <Posts n={8} />
+      </div>
+    </div>  
   </main>
 </Layout>
