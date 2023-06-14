@@ -15,8 +15,8 @@ import Layout from '../layouts/Layout.astro'
         Liberlunaは、主に学生の、ハッカーサークルです。
       </div>
     </div>
-    <div class="my-5">
-      <div class="text-center">
+    <div>
+      <div class="text-center my-5">
         <div class="text-xl">About Liberluna members</div>
         <div>
           <div>
@@ -25,7 +25,7 @@ import Layout from '../layouts/Layout.astro'
           </div>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center my-5">
         <div class="text-xl">プライベートは個人情報のみ</div>
         <div>
           <div>Liberlunaのプロジェクトは、ほぼ全てがOSSです。</div>
@@ -33,14 +33,14 @@ import Layout from '../layouts/Layout.astro'
           <div>コードはオープンですが、個人情報は守ります。<br/>プライベートは、個人情報のみ。</div>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center my-5">
         <div class="text-xl">企業ですか？ No.</div>
         <div>
           <div>Liberlunaは、サークルです。</div>
           <div>そのため、お金儲けは第一ではありません。</div>
         </div>
       </div>
-      <div class="text-center">
+      <div class="text-center my-5">
         <div class="text-xl">最高の体験を追求</div>
         <div>
           <div>Liberlunaのサービスは、全ての不満や意見を受け付けます。</div>
@@ -49,19 +49,19 @@ import Layout from '../layouts/Layout.astro'
         </div>
       </div>
       <br />
-      <div class="text-left">
+      <div class="text-left my-5">
         <div class="text-xl">Non-stop Development</div>
         <div>
           <div>Liberlunaの開発/活動は止まりません。</div>
           <div>メンバーがいなくならない限り</div>
         </div>
       </div>
-      <div class="mt-5">
-        <div class="text-2xl text-center mb-5">最新記事</div>
-        <div class="carousel rounded-box gap-4">
-          <Posts n={8} />
-        </div>
-      </div>
     </div>
+    <div class="mt-5">
+      <div class="text-2xl text-center mb-5">最新記事</div>
+      <div class="carousel rounded-box gap-4">
+        <Posts n={8} />
+      </div>
+    </div>  
   </main>
 </Layout>
