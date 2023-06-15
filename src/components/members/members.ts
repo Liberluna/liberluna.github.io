@@ -28,8 +28,8 @@ const members = (): Members => [
       ja: "ぽち"
     },
     descs: {
-      en: "My name is Pochi. I am the administrator of this group. For more information, please see 'SHOW PROFILE' below. Nice to meet you. ",
-      ja: "ぽちです。このグループの管理人してます。詳しいことは下の'SHOW PROFILE'を見てください。よろです。",
+      en: "My name is Pochi. I am the administrator of this group. For more information, please see 'SHOW PROFILE' below.I love Yurry Canon and Tsukuyomi. Nice to meet you. ",
+      ja: "ぽちです。このグループの管理人してます。詳しいことは下の'SHOW PROFILE'を見てください。ユリイ・カノンさんと月詠みが大好きです。よろです。",
     },
     posts: ["Leader","Developer"],
     skills: ["C", "C++", "HTML&CSS", "JavaScript","Python", "VBA&VBS(少し)", "KaliLinux"],
