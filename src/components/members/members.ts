@@ -448,6 +448,11 @@ const members = (): Members => [
         name: "Scratch",
         icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/scratch.svg",
       },
+      {
+        url: "https://github.com/movenap",
+        name: "GitHub",
+        icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg",
+      },
     ],
     id: "movenap",
   },
