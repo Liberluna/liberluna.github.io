@@ -416,12 +416,12 @@ const members = (): Members => [
       ja: ""
     },
     descs: {
-      en: "I can at least rewrite the MBR in assembly.",
-      ja: "アセンブリでMBRの書き換えくらいはできます。"
+      en: "I am interested in malware and anonymization techniques.",
+      ja: "マルウェアや匿名化技術に興味があります。"
     },
     posts: ["Developer","MalwareResearcher"],
-    skills: ["HTML&CSS", "JavaScript","PHP","Python","SQL(MySQL)", "Swift", "C", "C#", "Ruby", "(C,C#,Rubyは勉強中)"],
-    icon: "https://github.com/mama1928.png",
+    skills: ["HTML&CSS", "JavaScript","PHP","Python","SQL(MySQL)", "Swift", "go", "C",],
+    icon: "https://user-images.githubusercontent.com/131319857/243162668-95229e43-bfe4-41e9-bd48-1aa8f04699ce.png",
     links: [
       {
         url: "https://github.com/mama1928",
