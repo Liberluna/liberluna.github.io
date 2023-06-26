@@ -1,5 +1,7 @@
 # liberluna.github.io
 Liberlunaの公式サイトのソースコードです。
+## 貢献
+貢献した全著作権は、Liberlunaが保持するものとします。
 ## ブログの追加方法
 1. https://github.com/Liberluna/liberluna.github.io/tree/main/src/pages/blog/posts
 に飛んでください。
