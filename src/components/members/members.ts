@@ -185,7 +185,7 @@ const members = (): Members => [
       ja: "おもち",
     },
     descs: {
-      en: "My name is omochi.",
+      en: "My name is omochi.An ordinary junior high school student who wants to acquire hacking ability.I am using the icon of \"irasutoya\".",
       ja: "おもちです。ハッキングの能力を身に着けたい平凡な(?)中学生です! イラストや様のアイコンを使わせていただいてます。"
     },
     posts: ["Developer"],
