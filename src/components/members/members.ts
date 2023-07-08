@@ -191,6 +191,7 @@ const members = (): Members => [
     posts: ["Developer"],
     skills: ["HTML", "Java","Python","Scratch"],
     icon: "https://github.com/Liberluna/liberluna.github.io/blob/main/assets/avatars/omochi.png?raw=true",
+    id: "omochi",
     links: [
       {
         url: "https://github.com/hiro1234omochi",
