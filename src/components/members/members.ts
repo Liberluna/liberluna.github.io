@@ -181,15 +181,16 @@ const members = (): Members => [
   {
     name: "Omochi",
     names: {
-      ja: "おもち"
+      en: "omochi",
+      ja: "おもち",
     },
     descs: {
-      en: "--",
-      ja: "--"
+      en: "My name is omochi.",
+      ja: "おもちです。ハッキングの能力を身に着けたい平凡な(?)中学生です! イラストや様のアイコンを使わせていただいてます。"
     },
     posts: ["Developer"],
-    skills: ["HTML", "Java","Python"],
-    icon: "https://github.com/hiro1234omochi.png",
+    skills: ["HTML", "Java","Python","Scratch"],
+    icon: "https://github.com/Liberluna/liberluna.github.io/blob/main/assets/avatars/omochi.png?raw=true",
     links: [
       {
         url: "https://github.com/hiro1234omochi",
