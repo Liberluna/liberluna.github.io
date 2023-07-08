@@ -1,4 +1,3 @@
-
 ---
 layout: ../../../layouts/Profile.astro
 name: omochi
@@ -29,7 +28,7 @@ My homepage(制作中): [https://www.omochi.dev](https://www.omochi.dev)
 
 2022年9月ごろ そのサーバーが終了
  その時に自分のサーバーを始めました
-マイクラのpluginを作る言語はJavaだったのでJavaを学棒と思い勉強しました！
+マイクラのpluginを作る言語はJavaだったのでJavaを学ぼうと思い勉強しました！
 (今は中級者くらいはかけていると信じています!)
 
 2023年4月ごろ　Liberlunaに入りました!
