@@ -231,31 +231,6 @@ const members = (): Members => [
     ],
   },
   {
-    name: "RangeM-kishiyama",
-    names: {
-      ja: "RangeM-kishiyama"
-    },
-    descs: {
-      en: "--",
-      ja: "--"
-    },
-    posts: ["Developer"],
-    skills: ["C", "C#", "Django", "Go", "HTML&CSS", "JavaScript", "PHP", "Python"],
-    icon: "https://github.com/RangeM-kishiyama.png",
-    links: [
-      {
-        url: "https://github.com/RangeM-kishiyama",
-        name: "GitHub",
-        icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg",
-      },
-      {
-        url: "https://twitter.com/rangem_ctf",
-        name: "Twitter",
-        icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/twitter.svg",
-      },
-    ],
-  },
-  {
     name: "Kuroko",
     names: {
       ja: "黒子"
