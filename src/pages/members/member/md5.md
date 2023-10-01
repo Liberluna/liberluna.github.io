@@ -20,5 +20,3 @@ Liberlunaに入ったことで自分の趣味が広がった気がします。�
 
  ## Twitter
  今後プロジェクトをあげたり宣伝したりします。僕へのコンタクトもこちらからよろしくお願いします。https://twitter.com/lockeddoor0314
-## 私のサイト
-https://endermite0314.github.io/Fentanyl410/
