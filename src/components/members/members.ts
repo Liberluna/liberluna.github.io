@@ -327,7 +327,7 @@ const members = (): Members => [
     },
     posts: ["Developer"],
     skills: ["JavaScript","lua", "PHP", "Python", "TypeScript"],
-    icon: "https://github.com/Mambo-q.png",
+    icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg",
     links: [
       {
         url: "https://github.com/Mambo-q",
