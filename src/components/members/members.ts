@@ -441,8 +441,8 @@ const members = (): Members => [
         ja: "笹",
       },
       descs: {
-        en: "",
-        ja: "",
+        en: "I'm a middle school student who loves Vocaloid and wants to become an engineer.",
+        ja: "エンジニアになりたいボカロ好き中学生です。",
       },
       posts: ["Developer"],
       skills: ["Java","JS/TS","C","C++"],
