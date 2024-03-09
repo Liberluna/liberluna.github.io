@@ -462,4 +462,5 @@ const members = (): Members => [
     ],
     id: "sasa",
   },
+]
 export default members
