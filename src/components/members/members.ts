@@ -434,5 +434,30 @@ const members = (): Members => [
     id: "movenap",
   },
 ]
-
+  {
+    name: "笹",
+    names: {
+      ja: "笹"
+    },
+    descs: {
+      en: "I'm a middle school student who loves Vocaloid and wants to become an engineer.",
+      ja: "エンジニアになりたいボカロ好き中学生です。",
+    },
+    posts: ["Developer"],
+    skills: ["Java","JS/TS","C","C++"],
+    icon: "https://github.com/sasa-prog.png",
+    links: [
+      {
+        url: "https://github.com/sasa-prog",
+        name: "GitHub",
+        icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg",
+      },
+      {
+        url: "https://twitter.com/sasa-take05",
+        name: "Twitter",
+        icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/twitter.svg",
+      },
+    ],
+    id: "sasa",
+  },
 export default members
