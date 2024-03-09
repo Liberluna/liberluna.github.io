@@ -361,6 +361,7 @@ const members = (): Members => [
       },
     ],
   },
+/*
   {
     name: "MD5",
     names: {
@@ -387,6 +388,7 @@ const members = (): Members => [
     ],
     id: "md5",
   },
+*/
   {
     name: "DDoSer",
     names: {
