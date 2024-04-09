@@ -48,7 +48,7 @@ const members = (): Members => [
       },
     ],
   },
-  {
+ /* {
     name: "Mizore",
     names: {
       ja: "ミゾレ"
@@ -73,7 +73,7 @@ const members = (): Members => [
       },
     ],
     TBD: "はやくアイコン決めてくれ・・・"
-  },
+  }, */
   {
     name: "Bonds",
     names: {
