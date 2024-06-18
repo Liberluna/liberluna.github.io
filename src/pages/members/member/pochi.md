@@ -2,7 +2,7 @@
 layout: ../../../layouts/Profile.astro
 name: ぽち
 avatar: "pochi.png"
-links: 
+links: https://zenn.dev/pochi_liberluna
 ---
 使うことのできる言語は、**C,C++,Python,VBA/VBS,JavaScript,HTML,CSS**です。CSSできるって書いてますけどできませんよ(?)
 
