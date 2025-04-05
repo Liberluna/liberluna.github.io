@@ -461,5 +461,31 @@ const members = (): Members => [
       ],
       id: "sasa",
     },
+    {
+      name: "owasikohu",
+      names: {
+        ja: "owasikohu",
+      },
+      descs: {
+        en: "I'm a kosen callege student. I'm not very good at programming.",
+        ja: "高専生 実はあまりプログラミングが得意ではない",
+      },
+      posts: ["Developer"],
+      skills: ["JS/TS","Python","Arduino","Go"],
+      icon: "https://github.com/owasikohu.png",
+      links: [
+        {
+          url: "https://github.com/owasikohu",
+          name: "GitHub",
+          icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/github.svg",
+        },
+        {
+          url: "https://twitter.com/owasikohu",
+          name: "Twitter",
+          icon: "https://cdn.jsdelivr.net/npm/simple-icons@8.8.0/icons/twitter.svg",
+        },
+      ],
+      id: "owasikohu",
+    },
 ]
 export default members
